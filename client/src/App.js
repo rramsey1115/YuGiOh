@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   // wait to get a definite logged-in state before rendering
-  if (loggedInUser === null) {
+  if (loggedInUser === undefined) {
     return <Spinner />;
   }
 

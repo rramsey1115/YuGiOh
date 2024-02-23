@@ -92,7 +92,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpGet("Me")]
-    // [Authorize]
+    [Authorize]
     public IActionResult Me()
     {
         var identityUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -100,7 +100,7 @@ public class AuthController : ControllerBase
         var roles = User.FindAll(ClaimTypes.Role).Select(r => r.Value).ToList();
         if (profile != null)
         {
-            var userDto = new UserProfile
+            var userDto = new UserProfileDTO
             {
                 Id = profile.Id,
                 FirstName = profile.FirstName,
