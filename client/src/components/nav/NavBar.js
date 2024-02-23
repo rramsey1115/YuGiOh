@@ -11,22 +11,12 @@ import {
   NavbarText,
   NavbarToggler,
 } from "reactstrap";
-import { logout } from "../managers/authManager";
-import { getBikesInShopCount } from "../managers/bikeManager";
+import { logout } from "../../managers/authManager";
 
 export default function NavBar({ loggedInUser, setLoggedInUser }) {
-  const [inventory, setInventory] = useState(0);
   const [open, setOpen] = useState(false);
 
   const toggleNavbar = () => setOpen(!open);
-
-  const getInventory = () => {
-    getBikesInShopCount().then(setInventory);
-  };
-
-  useEffect(() => {
-    loggedInUser && getInventory();
-  }, [loggedInUser]);
 
   return (
     <div>

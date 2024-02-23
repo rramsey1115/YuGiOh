@@ -9,7 +9,7 @@ using YuGiOh.Data;
 using YuGiOh.Models;
 using YuGiOh.Models.DTOs;
 
-namespace YuGiOh.Controllers;
+// namespace YuGiOh.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -92,7 +92,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpGet("Me")]
-    [Authorize]
+    // [Authorize]
     public IActionResult Me()
     {
         var identityUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
