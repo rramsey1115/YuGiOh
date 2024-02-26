@@ -23,6 +23,1956 @@ namespace YuGiOh.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("CardImage", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
+
+                    b.Property<int>("Cardid")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("image_url_small")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("Cardid");
+
+                    b.ToTable("CardImages");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            Cardid = 23771716,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/23771716.jpg"
+                        },
+                        new
+                        {
+                            id = 2,
+                            Cardid = 41356845,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/41356845.jpg"
+                        },
+                        new
+                        {
+                            id = 3,
+                            Cardid = 42431843,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/42431843.jpg"
+                        },
+                        new
+                        {
+                            id = 4,
+                            Cardid = 93221206,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/93221206.jpg"
+                        },
+                        new
+                        {
+                            id = 5,
+                            Cardid = 43230671,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/43230671.jpg"
+                        },
+                        new
+                        {
+                            id = 6,
+                            Cardid = 17092736,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/17092736.jpg"
+                        },
+                        new
+                        {
+                            id = 7,
+                            Cardid = 48365709,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/48365709.jpg"
+                        },
+                        new
+                        {
+                            id = 8,
+                            Cardid = 85639257,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/85639257.jpg"
+                        },
+                        new
+                        {
+                            id = 9,
+                            Cardid = 53153481,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/53153481.jpg"
+                        },
+                        new
+                        {
+                            id = 10,
+                            Cardid = 9076207,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/9076207.jpg"
+                        },
+                        new
+                        {
+                            id = 11,
+                            Cardid = 15480588,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/15480588.jpg"
+                        },
+                        new
+                        {
+                            id = 12,
+                            Cardid = 17535588,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/17535588.jpg"
+                        },
+                        new
+                        {
+                            id = 13,
+                            Cardid = 20277860,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/20277860.jpg"
+                        },
+                        new
+                        {
+                            id = 14,
+                            Cardid = 88819587,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/88819587.jpg"
+                        },
+                        new
+                        {
+                            id = 15,
+                            Cardid = 86325596,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/86325596.jpg"
+                        },
+                        new
+                        {
+                            id = 16,
+                            Cardid = 81480461,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/81480461.jpg"
+                        },
+                        new
+                        {
+                            id = 17,
+                            Cardid = 89091579,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/89091579.jpg"
+                        },
+                        new
+                        {
+                            id = 18,
+                            Cardid = 5053103,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/5053103.jpg"
+                        },
+                        new
+                        {
+                            id = 19,
+                            Cardid = 18246479,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/18246479.jpg"
+                        },
+                        new
+                        {
+                            id = 20,
+                            Cardid = 46009906,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/46009906.jpg"
+                        },
+                        new
+                        {
+                            id = 21,
+                            Cardid = 32452818,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/32452818.jpg"
+                        },
+                        new
+                        {
+                            id = 22,
+                            Cardid = 25655502,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/25655502.jpg"
+                        },
+                        new
+                        {
+                            id = 23,
+                            Cardid = 16768387,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/16768387.jpg"
+                        },
+                        new
+                        {
+                            id = 24,
+                            Cardid = 11901678,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/11901678.jpg"
+                        },
+                        new
+                        {
+                            id = 25,
+                            Cardid = 87564352,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/87564352.jpg"
+                        },
+                        new
+                        {
+                            id = 26,
+                            Cardid = 28470714,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/28470714.jpg"
+                        },
+                        new
+                        {
+                            id = 27,
+                            Cardid = 70138455,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/70138455.jpg"
+                        },
+                        new
+                        {
+                            id = 28,
+                            Cardid = 25880422,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/25880422.jpg"
+                        },
+                        new
+                        {
+                            id = 29,
+                            Cardid = 89631139,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/89631139.jpg"
+                        },
+                        new
+                        {
+                            id = 30,
+                            Cardid = 41396436,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/41396436.jpg"
+                        },
+                        new
+                        {
+                            id = 31,
+                            Cardid = 91595718,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/91595718.jpg"
+                        },
+                        new
+                        {
+                            id = 32,
+                            Cardid = 81386177,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/81386177.jpg"
+                        },
+                        new
+                        {
+                            id = 33,
+                            Cardid = 11384280,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/11384280.jpg"
+                        },
+                        new
+                        {
+                            id = 34,
+                            Cardid = 72892473,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/72892473.jpg"
+                        },
+                        new
+                        {
+                            id = 35,
+                            Cardid = 62121,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/62121.jpg"
+                        },
+                        new
+                        {
+                            id = 36,
+                            Cardid = 44209392,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/44209392.jpg"
+                        },
+                        new
+                        {
+                            id = 37,
+                            Cardid = 95727991,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/95727991.jpg"
+                        },
+                        new
+                        {
+                            id = 38,
+                            Cardid = 91152256,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/91152256.jpg"
+                        },
+                        new
+                        {
+                            id = 39,
+                            Cardid = 4031928,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/4031928.jpg"
+                        },
+                        new
+                        {
+                            id = 40,
+                            Cardid = 37421579,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/37421579.jpg"
+                        },
+                        new
+                        {
+                            id = 41,
+                            Cardid = 41218256,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/41218256.jpg"
+                        },
+                        new
+                        {
+                            id = 42,
+                            Cardid = 40240595,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/40240595.jpg"
+                        },
+                        new
+                        {
+                            id = 43,
+                            Cardid = 93889755,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/93889755.jpg"
+                        },
+                        new
+                        {
+                            id = 44,
+                            Cardid = 67494157,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/67494157.jpg"
+                        },
+                        new
+                        {
+                            id = 45,
+                            Cardid = 28279543,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/28279543.jpg"
+                        },
+                        new
+                        {
+                            id = 46,
+                            Cardid = 89112729,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/89112729.jpg"
+                        },
+                        new
+                        {
+                            id = 47,
+                            Cardid = 81057959,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/81057959.jpg"
+                        },
+                        new
+                        {
+                            id = 48,
+                            Cardid = 41949033,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/41949033.jpg"
+                        },
+                        new
+                        {
+                            id = 49,
+                            Cardid = 21417692,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/21417692.jpg"
+                        },
+                        new
+                        {
+                            id = 50,
+                            Cardid = 4614116,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/4614116.jpg"
+                        },
+                        new
+                        {
+                            id = 51,
+                            Cardid = 9159938,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/9159938.jpg"
+                        },
+                        new
+                        {
+                            id = 52,
+                            Cardid = 53129443,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/53129443.jpg"
+                        },
+                        new
+                        {
+                            id = 53,
+                            Cardid = 53375573,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/53375573.jpg"
+                        },
+                        new
+                        {
+                            id = 54,
+                            Cardid = 46986414,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/46986414.jpg"
+                        },
+                        new
+                        {
+                            id = 55,
+                            Cardid = 89494469,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/89494469.jpg"
+                        },
+                        new
+                        {
+                            id = 56,
+                            Cardid = 17881964,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/17881964.jpg"
+                        },
+                        new
+                        {
+                            id = 57,
+                            Cardid = 43500484,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/43500484.jpg"
+                        },
+                        new
+                        {
+                            id = 58,
+                            Cardid = 19159413,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/19159413.jpg"
+                        },
+                        new
+                        {
+                            id = 59,
+                            Cardid = 28593363,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/28593363.jpg"
+                        },
+                        new
+                        {
+                            id = 60,
+                            Cardid = 73481154,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/73481154.jpg"
+                        },
+                        new
+                        {
+                            id = 61,
+                            Cardid = 84257640,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/84257640.jpg"
+                        },
+                        new
+                        {
+                            id = 62,
+                            Cardid = 76446915,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/76446915.jpg"
+                        },
+                        new
+                        {
+                            id = 63,
+                            Cardid = 40826495,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/40826495.jpg"
+                        },
+                        new
+                        {
+                            id = 64,
+                            Cardid = 16972957,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/16972957.jpg"
+                        },
+                        new
+                        {
+                            id = 65,
+                            Cardid = 50045299,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/50045299.jpg"
+                        },
+                        new
+                        {
+                            id = 66,
+                            Cardid = 55763552,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/55763552.jpg"
+                        },
+                        new
+                        {
+                            id = 67,
+                            Cardid = 1435851,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/1435851.jpg"
+                        },
+                        new
+                        {
+                            id = 68,
+                            Cardid = 66672569,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/66672569.jpg"
+                        },
+                        new
+                        {
+                            id = 69,
+                            Cardid = 70681994,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/70681994.jpg"
+                        },
+                        new
+                        {
+                            id = 70,
+                            Cardid = 13215230,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/13215230.jpg"
+                        },
+                        new
+                        {
+                            id = 71,
+                            Cardid = 16353197,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/16353197.jpg"
+                        },
+                        new
+                        {
+                            id = 72,
+                            Cardid = 55875323,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/55875323.jpg"
+                        },
+                        new
+                        {
+                            id = 73,
+                            Cardid = 37820550,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/37820550.jpg"
+                        },
+                        new
+                        {
+                            id = 74,
+                            Cardid = 90219263,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/90219263.jpg"
+                        },
+                        new
+                        {
+                            id = 75,
+                            Cardid = 15237615,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/15237615.jpg"
+                        },
+                        new
+                        {
+                            id = 76,
+                            Cardid = 75376965,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/75376965.jpg"
+                        },
+                        new
+                        {
+                            id = 77,
+                            Cardid = 33396948,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/33396948.jpg"
+                        },
+                        new
+                        {
+                            id = 78,
+                            Cardid = 3027001,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/3027001.jpg"
+                        },
+                        new
+                        {
+                            id = 79,
+                            Cardid = 41392891,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/41392891.jpg"
+                        },
+                        new
+                        {
+                            id = 80,
+                            Cardid = 2863439,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/2863439.jpg"
+                        },
+                        new
+                        {
+                            id = 81,
+                            Cardid = 73134082,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/73134082.jpg"
+                        },
+                        new
+                        {
+                            id = 82,
+                            Cardid = 53293545,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/53293545.jpg"
+                        },
+                        new
+                        {
+                            id = 83,
+                            Cardid = 71407486,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/71407486.jpg"
+                        },
+                        new
+                        {
+                            id = 84,
+                            Cardid = 66788016,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/66788016.jpg"
+                        },
+                        new
+                        {
+                            id = 85,
+                            Cardid = 60862676,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/60862676.jpg"
+                        },
+                        new
+                        {
+                            id = 86,
+                            Cardid = 58528964,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/58528964.jpg"
+                        },
+                        new
+                        {
+                            id = 87,
+                            Cardid = 34460851,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/34460851.jpg"
+                        },
+                        new
+                        {
+                            id = 88,
+                            Cardid = 45231177,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/45231177.jpg"
+                        },
+                        new
+                        {
+                            id = 89,
+                            Cardid = 95952802,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/95952802.jpg"
+                        },
+                        new
+                        {
+                            id = 90,
+                            Cardid = 98252586,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/98252586.jpg"
+                        },
+                        new
+                        {
+                            id = 91,
+                            Cardid = 87430998,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/87430998.jpg"
+                        },
+                        new
+                        {
+                            id = 92,
+                            Cardid = 98818516,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/98818516.jpg"
+                        },
+                        new
+                        {
+                            id = 93,
+                            Cardid = 1641882,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/1641882.jpg"
+                        },
+                        new
+                        {
+                            id = 94,
+                            Cardid = 66889139,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/66889139.jpg"
+                        },
+                        new
+                        {
+                            id = 95,
+                            Cardid = 6368038,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/6368038.jpg"
+                        },
+                        new
+                        {
+                            id = 96,
+                            Cardid = 49888191,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/49888191.jpg"
+                        },
+                        new
+                        {
+                            id = 97,
+                            Cardid = 25833572,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/25833572.jpg"
+                        },
+                        new
+                        {
+                            id = 98,
+                            Cardid = 5818798,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/5818798.jpg"
+                        },
+                        new
+                        {
+                            id = 99,
+                            Cardid = 24668830,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/24668830.jpg"
+                        },
+                        new
+                        {
+                            id = 100,
+                            Cardid = 13039848,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/13039848.jpg"
+                        },
+                        new
+                        {
+                            id = 101,
+                            Cardid = 8471389,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/8471389.jpg"
+                        },
+                        new
+                        {
+                            id = 102,
+                            Cardid = 51828629,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/51828629.jpg"
+                        },
+                        new
+                        {
+                            id = 103,
+                            Cardid = 11868825,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/11868825.jpg"
+                        },
+                        new
+                        {
+                            id = 104,
+                            Cardid = 82542267,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/82542267.jpg"
+                        },
+                        new
+                        {
+                            id = 105,
+                            Cardid = 14141448,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/14141448.jpg"
+                        },
+                        new
+                        {
+                            id = 106,
+                            Cardid = 13429800,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/13429800.jpg"
+                        },
+                        new
+                        {
+                            id = 107,
+                            Cardid = 22910685,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/22910685.jpg"
+                        },
+                        new
+                        {
+                            id = 108,
+                            Cardid = 58314394,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/58314394.jpg"
+                        },
+                        new
+                        {
+                            id = 109,
+                            Cardid = 89272878,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/89272878.jpg"
+                        },
+                        new
+                        {
+                            id = 110,
+                            Cardid = 31122090,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/31122090.jpg"
+                        },
+                        new
+                        {
+                            id = 111,
+                            Cardid = 7089711,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/7089711.jpg"
+                        },
+                        new
+                        {
+                            id = 112,
+                            Cardid = 20060230,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/20060230.jpg"
+                        },
+                        new
+                        {
+                            id = 113,
+                            Cardid = 76812113,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/76812113.jpg"
+                        },
+                        new
+                        {
+                            id = 114,
+                            Cardid = 12206212,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/12206212.jpg"
+                        },
+                        new
+                        {
+                            id = 115,
+                            Cardid = 19613556,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/19613556.jpg"
+                        },
+                        new
+                        {
+                            id = 116,
+                            Cardid = 64501875,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/64501875.jpg"
+                        },
+                        new
+                        {
+                            id = 117,
+                            Cardid = 46130346,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/46130346.jpg"
+                        },
+                        new
+                        {
+                            id = 118,
+                            Cardid = 96851799,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/96851799.jpg"
+                        },
+                        new
+                        {
+                            id = 119,
+                            Cardid = 76184692,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/76184692.jpg"
+                        },
+                        new
+                        {
+                            id = 120,
+                            Cardid = 98069388,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/98069388.jpg"
+                        },
+                        new
+                        {
+                            id = 121,
+                            Cardid = 67629977,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/67629977.jpg"
+                        },
+                        new
+                        {
+                            id = 122,
+                            Cardid = 80141480,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/80141480.jpg"
+                        },
+                        new
+                        {
+                            id = 123,
+                            Cardid = 2118022,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/2118022.jpg"
+                        },
+                        new
+                        {
+                            id = 124,
+                            Cardid = 28546905,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/28546905.jpg"
+                        },
+                        new
+                        {
+                            id = 125,
+                            Cardid = 7019529,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/7019529.jpg"
+                        },
+                        new
+                        {
+                            id = 126,
+                            Cardid = 98374133,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/98374133.jpg"
+                        },
+                        new
+                        {
+                            id = 127,
+                            Cardid = 14851496,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/14851496.jpg"
+                        },
+                        new
+                        {
+                            id = 128,
+                            Cardid = 32809211,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/32809211.jpg"
+                        },
+                        new
+                        {
+                            id = 129,
+                            Cardid = 94773007,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/94773007.jpg"
+                        },
+                        new
+                        {
+                            id = 130,
+                            Cardid = 30113682,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/30113682.jpg"
+                        },
+                        new
+                        {
+                            id = 131,
+                            Cardid = 24068492,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/24068492.jpg"
+                        },
+                        new
+                        {
+                            id = 132,
+                            Cardid = 15401633,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/15401633.jpg"
+                        },
+                        new
+                        {
+                            id = 133,
+                            Cardid = 9653271,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/9653271.jpg"
+                        },
+                        new
+                        {
+                            id = 134,
+                            Cardid = 54541900,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/54541900.jpg"
+                        },
+                        new
+                        {
+                            id = 135,
+                            Cardid = 62340868,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/62340868.jpg"
+                        },
+                        new
+                        {
+                            id = 136,
+                            Cardid = 88979991,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/88979991.jpg"
+                        },
+                        new
+                        {
+                            id = 137,
+                            Cardid = 84686841,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/84686841.jpg"
+                        },
+                        new
+                        {
+                            id = 138,
+                            Cardid = 69455834,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/69455834.jpg"
+                        },
+                        new
+                        {
+                            id = 139,
+                            Cardid = 1184620,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/1184620.jpg"
+                        },
+                        new
+                        {
+                            id = 140,
+                            Cardid = 67724379,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/67724379.jpg"
+                        },
+                        new
+                        {
+                            id = 141,
+                            Cardid = 56283725,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/56283725.jpg"
+                        },
+                        new
+                        {
+                            id = 142,
+                            Cardid = 85705804,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/85705804.jpg"
+                        },
+                        new
+                        {
+                            id = 143,
+                            Cardid = 40640057,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/40640057.jpg"
+                        },
+                        new
+                        {
+                            id = 144,
+                            Cardid = 97590747,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/97590747.jpg"
+                        },
+                        new
+                        {
+                            id = 145,
+                            Cardid = 99551425,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/99551425.jpg"
+                        },
+                        new
+                        {
+                            id = 146,
+                            Cardid = 17358176,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/17358176.jpg"
+                        },
+                        new
+                        {
+                            id = 147,
+                            Cardid = 87756343,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/87756343.jpg"
+                        },
+                        new
+                        {
+                            id = 148,
+                            Cardid = 94675535,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/94675535.jpg"
+                        },
+                        new
+                        {
+                            id = 149,
+                            Cardid = 77007920,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/77007920.jpg"
+                        },
+                        new
+                        {
+                            id = 150,
+                            Cardid = 85602018,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/85602018.jpg"
+                        },
+                        new
+                        {
+                            id = 151,
+                            Cardid = 87322377,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/87322377.jpg"
+                        },
+                        new
+                        {
+                            id = 152,
+                            Cardid = 20394040,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/20394040.jpg"
+                        },
+                        new
+                        {
+                            id = 153,
+                            Cardid = 7902349,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/7902349.jpg"
+                        },
+                        new
+                        {
+                            id = 154,
+                            Cardid = 44519536,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/44519536.jpg"
+                        },
+                        new
+                        {
+                            id = 155,
+                            Cardid = 61854111,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/61854111.jpg"
+                        },
+                        new
+                        {
+                            id = 156,
+                            Cardid = 12472242,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/12472242.jpg"
+                        },
+                        new
+                        {
+                            id = 157,
+                            Cardid = 10538007,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/10538007.jpg"
+                        },
+                        new
+                        {
+                            id = 158,
+                            Cardid = 55444629,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/55444629.jpg"
+                        },
+                        new
+                        {
+                            id = 159,
+                            Cardid = 68658728,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/68658728.jpg"
+                        },
+                        new
+                        {
+                            id = 160,
+                            Cardid = 17985575,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/17985575.jpg"
+                        },
+                        new
+                        {
+                            id = 161,
+                            Cardid = 56342351,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/56342351.jpg"
+                        },
+                        new
+                        {
+                            id = 162,
+                            Cardid = 92731455,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/92731455.jpg"
+                        },
+                        new
+                        {
+                            id = 163,
+                            Cardid = 25769732,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/25769732.jpg"
+                        },
+                        new
+                        {
+                            id = 164,
+                            Cardid = 77414722,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/77414722.jpg"
+                        },
+                        new
+                        {
+                            id = 165,
+                            Cardid = 46474915,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/46474915.jpg"
+                        },
+                        new
+                        {
+                            id = 166,
+                            Cardid = 31560081,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/31560081.jpg"
+                        },
+                        new
+                        {
+                            id = 167,
+                            Cardid = 40374923,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/40374923.jpg"
+                        },
+                        new
+                        {
+                            id = 168,
+                            Cardid = 93553943,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/93553943.jpg"
+                        },
+                        new
+                        {
+                            id = 169,
+                            Cardid = 54652250,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/54652250.jpg"
+                        },
+                        new
+                        {
+                            id = 170,
+                            Cardid = 13723605,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/13723605.jpg"
+                        },
+                        new
+                        {
+                            id = 171,
+                            Cardid = 44287299,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/44287299.jpg"
+                        },
+                        new
+                        {
+                            id = 172,
+                            Cardid = 28933734,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/28933734.jpg"
+                        },
+                        new
+                        {
+                            id = 173,
+                            Cardid = 10189126,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/10189126.jpg"
+                        },
+                        new
+                        {
+                            id = 174,
+                            Cardid = 75499502,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/75499502.jpg"
+                        },
+                        new
+                        {
+                            id = 175,
+                            Cardid = 76211194,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/76211194.jpg"
+                        },
+                        new
+                        {
+                            id = 176,
+                            Cardid = 21817254,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/21817254.jpg"
+                        },
+                        new
+                        {
+                            id = 177,
+                            Cardid = 9293977,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/9293977.jpg"
+                        },
+                        new
+                        {
+                            id = 178,
+                            Cardid = 7489323,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/7489323.jpg"
+                        },
+                        new
+                        {
+                            id = 179,
+                            Cardid = 44095762,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/44095762.jpg"
+                        },
+                        new
+                        {
+                            id = 180,
+                            Cardid = 33178416,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/33178416.jpg"
+                        },
+                        new
+                        {
+                            id = 181,
+                            Cardid = 36121917,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/36121917.jpg"
+                        },
+                        new
+                        {
+                            id = 182,
+                            Cardid = 83764719,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/83764719.jpg"
+                        },
+                        new
+                        {
+                            id = 183,
+                            Cardid = 55784832,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/55784832.jpg"
+                        },
+                        new
+                        {
+                            id = 184,
+                            Cardid = 50913601,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/50913601.jpg"
+                        },
+                        new
+                        {
+                            id = 185,
+                            Cardid = 46657337,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/46657337.jpg"
+                        },
+                        new
+                        {
+                            id = 186,
+                            Cardid = 93900406,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/93900406.jpg"
+                        },
+                        new
+                        {
+                            id = 187,
+                            Cardid = 56907389,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/56907389.jpg"
+                        },
+                        new
+                        {
+                            id = 188,
+                            Cardid = 54098121,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/54098121.jpg"
+                        },
+                        new
+                        {
+                            id = 189,
+                            Cardid = 47060154,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/47060154.jpg"
+                        },
+                        new
+                        {
+                            id = 190,
+                            Cardid = 68516705,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/68516705.jpg"
+                        },
+                        new
+                        {
+                            id = 191,
+                            Cardid = 98049915,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/98049915.jpg"
+                        },
+                        new
+                        {
+                            id = 192,
+                            Cardid = 15025844,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/15025844.jpg"
+                        },
+                        new
+                        {
+                            id = 193,
+                            Cardid = 36607978,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/36607978.jpg"
+                        },
+                        new
+                        {
+                            id = 194,
+                            Cardid = 83464209,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/83464209.jpg"
+                        },
+                        new
+                        {
+                            id = 195,
+                            Cardid = 90963488,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/90963488.jpg"
+                        },
+                        new
+                        {
+                            id = 196,
+                            Cardid = 50930991,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/50930991.jpg"
+                        },
+                        new
+                        {
+                            id = 197,
+                            Cardid = 7805359,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/7805359.jpg"
+                        },
+                        new
+                        {
+                            id = 198,
+                            Cardid = 86088138,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/86088138.jpg"
+                        },
+                        new
+                        {
+                            id = 199,
+                            Cardid = 45121025,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/45121025.jpg"
+                        },
+                        new
+                        {
+                            id = 200,
+                            Cardid = 33064647,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/33064647.jpg"
+                        },
+                        new
+                        {
+                            id = 201,
+                            Cardid = 58861941,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/58861941.jpg"
+                        },
+                        new
+                        {
+                            id = 202,
+                            Cardid = 19523799,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/19523799.jpg"
+                        },
+                        new
+                        {
+                            id = 203,
+                            Cardid = 21263083,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/21263083.jpg"
+                        },
+                        new
+                        {
+                            id = 204,
+                            Cardid = 50152549,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/50152549.jpg"
+                        },
+                        new
+                        {
+                            id = 205,
+                            Cardid = 38142739,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/38142739.jpg"
+                        },
+                        new
+                        {
+                            id = 206,
+                            Cardid = 75356564,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/75356564.jpg"
+                        },
+                        new
+                        {
+                            id = 207,
+                            Cardid = 58192742,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/58192742.jpg"
+                        },
+                        new
+                        {
+                            id = 208,
+                            Cardid = 24094653,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/24094653.jpg"
+                        },
+                        new
+                        {
+                            id = 209,
+                            Cardid = 55144522,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/55144522.jpg"
+                        },
+                        new
+                        {
+                            id = 210,
+                            Cardid = 77027445,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/77027445.jpg"
+                        },
+                        new
+                        {
+                            id = 211,
+                            Cardid = 549481,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/549481.jpg"
+                        },
+                        new
+                        {
+                            id = 212,
+                            Cardid = 51371017,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/51371017.jpg"
+                        },
+                        new
+                        {
+                            id = 213,
+                            Cardid = 10071456,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/10071456.jpg"
+                        },
+                        new
+                        {
+                            id = 214,
+                            Cardid = 29155212,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/29155212.jpg"
+                        },
+                        new
+                        {
+                            id = 215,
+                            Cardid = 74703140,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/74703140.jpg"
+                        },
+                        new
+                        {
+                            id = 216,
+                            Cardid = 5901497,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/5901497.jpg"
+                        },
+                        new
+                        {
+                            id = 217,
+                            Cardid = 94905343,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/94905343.jpg"
+                        },
+                        new
+                        {
+                            id = 218,
+                            Cardid = 12580477,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/12580477.jpg"
+                        },
+                        new
+                        {
+                            id = 219,
+                            Cardid = 21347810,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/21347810.jpg"
+                        },
+                        new
+                        {
+                            id = 220,
+                            Cardid = 51267887,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/51267887.jpg"
+                        },
+                        new
+                        {
+                            id = 221,
+                            Cardid = 85309439,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/85309439.jpg"
+                        },
+                        new
+                        {
+                            id = 222,
+                            Cardid = 33066139,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/33066139.jpg"
+                        },
+                        new
+                        {
+                            id = 223,
+                            Cardid = 38199696,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/38199696.jpg"
+                        },
+                        new
+                        {
+                            id = 224,
+                            Cardid = 74677422,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/74677422.jpg"
+                        },
+                        new
+                        {
+                            id = 225,
+                            Cardid = 17814387,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/17814387.jpg"
+                        },
+                        new
+                        {
+                            id = 226,
+                            Cardid = 51482758,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/51482758.jpg"
+                        },
+                        new
+                        {
+                            id = 227,
+                            Cardid = 77622396,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/77622396.jpg"
+                        },
+                        new
+                        {
+                            id = 228,
+                            Cardid = 70903634,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/70903634.jpg"
+                        },
+                        new
+                        {
+                            id = 229,
+                            Cardid = 8124921,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/8124921.jpg"
+                        },
+                        new
+                        {
+                            id = 230,
+                            Cardid = 20436034,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/20436034.jpg"
+                        },
+                        new
+                        {
+                            id = 231,
+                            Cardid = 19066538,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/19066538.jpg"
+                        },
+                        new
+                        {
+                            id = 232,
+                            Cardid = 88279736,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/88279736.jpg"
+                        },
+                        new
+                        {
+                            id = 233,
+                            Cardid = 68846917,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/68846917.jpg"
+                        },
+                        new
+                        {
+                            id = 234,
+                            Cardid = 91939608,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/91939608.jpg"
+                        },
+                        new
+                        {
+                            id = 235,
+                            Cardid = 39004808,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/39004808.jpg"
+                        },
+                        new
+                        {
+                            id = 236,
+                            Cardid = 26378150,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/26378150.jpg"
+                        },
+                        new
+                        {
+                            id = 237,
+                            Cardid = 15303296,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/15303296.jpg"
+                        },
+                        new
+                        {
+                            id = 238,
+                            Cardid = 24611934,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/24611934.jpg"
+                        },
+                        new
+                        {
+                            id = 239,
+                            Cardid = 66602787,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/66602787.jpg"
+                        },
+                        new
+                        {
+                            id = 240,
+                            Cardid = 32268901,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/32268901.jpg"
+                        },
+                        new
+                        {
+                            id = 241,
+                            Cardid = 73051941,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/73051941.jpg"
+                        },
+                        new
+                        {
+                            id = 242,
+                            Cardid = 25955164,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/25955164.jpg"
+                        },
+                        new
+                        {
+                            id = 243,
+                            Cardid = 26202165,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/26202165.jpg"
+                        },
+                        new
+                        {
+                            id = 244,
+                            Cardid = 6740720,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/6740720.jpg"
+                        },
+                        new
+                        {
+                            id = 245,
+                            Cardid = 3819470,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/3819470.jpg"
+                        },
+                        new
+                        {
+                            id = 246,
+                            Cardid = 30778711,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/30778711.jpg"
+                        },
+                        new
+                        {
+                            id = 247,
+                            Cardid = 56830749,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/56830749.jpg"
+                        },
+                        new
+                        {
+                            id = 248,
+                            Cardid = 52097679,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/52097679.jpg"
+                        },
+                        new
+                        {
+                            id = 249,
+                            Cardid = 1557499,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/1557499.jpg"
+                        },
+                        new
+                        {
+                            id = 250,
+                            Cardid = 90357090,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/90357090.jpg"
+                        },
+                        new
+                        {
+                            id = 251,
+                            Cardid = 2504891,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/2504891.jpg"
+                        },
+                        new
+                        {
+                            id = 252,
+                            Cardid = 10202894,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/10202894.jpg"
+                        },
+                        new
+                        {
+                            id = 253,
+                            Cardid = 32274490,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/32274490.jpg"
+                        },
+                        new
+                        {
+                            id = 254,
+                            Cardid = 86318356,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/86318356.jpg"
+                        },
+                        new
+                        {
+                            id = 255,
+                            Cardid = 41420027,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/41420027.jpg"
+                        },
+                        new
+                        {
+                            id = 256,
+                            Cardid = 49218300,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/49218300.jpg"
+                        },
+                        new
+                        {
+                            id = 257,
+                            Cardid = 68005187,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/68005187.jpg"
+                        },
+                        new
+                        {
+                            id = 258,
+                            Cardid = 5758500,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/5758500.jpg"
+                        },
+                        new
+                        {
+                            id = 259,
+                            Cardid = 76103675,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/76103675.jpg"
+                        },
+                        new
+                        {
+                            id = 260,
+                            Cardid = 85326399,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/85326399.jpg"
+                        },
+                        new
+                        {
+                            id = 261,
+                            Cardid = 80770678,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/80770678.jpg"
+                        },
+                        new
+                        {
+                            id = 262,
+                            Cardid = 8201910,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/8201910.jpg"
+                        },
+                        new
+                        {
+                            id = 263,
+                            Cardid = 29172562,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/29172562.jpg"
+                        },
+                        new
+                        {
+                            id = 264,
+                            Cardid = 13599884,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/13599884.jpg"
+                        },
+                        new
+                        {
+                            id = 265,
+                            Cardid = 83225447,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/83225447.jpg"
+                        },
+                        new
+                        {
+                            id = 266,
+                            Cardid = 63102017,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/63102017.jpg"
+                        },
+                        new
+                        {
+                            id = 267,
+                            Cardid = 55291359,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/55291359.jpg"
+                        },
+                        new
+                        {
+                            id = 268,
+                            Cardid = 98434877,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/98434877.jpg"
+                        },
+                        new
+                        {
+                            id = 269,
+                            Cardid = 70781052,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/70781052.jpg"
+                        },
+                        new
+                        {
+                            id = 270,
+                            Cardid = 40453765,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/40453765.jpg"
+                        },
+                        new
+                        {
+                            id = 271,
+                            Cardid = 37120512,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/37120512.jpg"
+                        },
+                        new
+                        {
+                            id = 272,
+                            Cardid = 98495314,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/98495314.jpg"
+                        },
+                        new
+                        {
+                            id = 273,
+                            Cardid = 72302403,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/72302403.jpg"
+                        },
+                        new
+                        {
+                            id = 274,
+                            Cardid = 50005633,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/50005633.jpg"
+                        },
+                        new
+                        {
+                            id = 275,
+                            Cardid = 28725004,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/28725004.jpg"
+                        },
+                        new
+                        {
+                            id = 276,
+                            Cardid = 63308047,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/63308047.jpg"
+                        },
+                        new
+                        {
+                            id = 277,
+                            Cardid = 32864,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/32864.jpg"
+                        },
+                        new
+                        {
+                            id = 278,
+                            Cardid = 71107816,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/71107816.jpg"
+                        },
+                        new
+                        {
+                            id = 279,
+                            Cardid = 41142615,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/41142615.jpg"
+                        },
+                        new
+                        {
+                            id = 280,
+                            Cardid = 43973174,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/43973174.jpg"
+                        },
+                        new
+                        {
+                            id = 281,
+                            Cardid = 18710707,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/18710707.jpg"
+                        },
+                        new
+                        {
+                            id = 282,
+                            Cardid = 84926738,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/84926738.jpg"
+                        },
+                        new
+                        {
+                            id = 283,
+                            Cardid = 81820689,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/81820689.jpg"
+                        },
+                        new
+                        {
+                            id = 284,
+                            Cardid = 25109950,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/25109950.jpg"
+                        },
+                        new
+                        {
+                            id = 285,
+                            Cardid = 87557188,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/87557188.jpg"
+                        },
+                        new
+                        {
+                            id = 286,
+                            Cardid = 51275027,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/51275027.jpg"
+                        },
+                        new
+                        {
+                            id = 287,
+                            Cardid = 6285791,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/6285791.jpg"
+                        },
+                        new
+                        {
+                            id = 288,
+                            Cardid = 41462083,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/41462083.jpg"
+                        },
+                        new
+                        {
+                            id = 289,
+                            Cardid = 31786629,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/31786629.jpg"
+                        },
+                        new
+                        {
+                            id = 290,
+                            Cardid = 71625222,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/71625222.jpg"
+                        },
+                        new
+                        {
+                            id = 291,
+                            Cardid = 69572024,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/69572024.jpg"
+                        },
+                        new
+                        {
+                            id = 292,
+                            Cardid = 4206964,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/4206964.jpg"
+                        },
+                        new
+                        {
+                            id = 293,
+                            Cardid = 46461247,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/46461247.jpg"
+                        },
+                        new
+                        {
+                            id = 294,
+                            Cardid = 46918794,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/46918794.jpg"
+                        },
+                        new
+                        {
+                            id = 295,
+                            Cardid = 78780140,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/78780140.jpg"
+                        },
+                        new
+                        {
+                            id = 296,
+                            Cardid = 39111158,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/39111158.jpg"
+                        },
+                        new
+                        {
+                            id = 297,
+                            Cardid = 77827521,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/77827521.jpg"
+                        },
+                        new
+                        {
+                            id = 298,
+                            Cardid = 79759861,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/79759861.jpg"
+                        },
+                        new
+                        {
+                            id = 299,
+                            Cardid = 45042329,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/45042329.jpg"
+                        },
+                        new
+                        {
+                            id = 300,
+                            Cardid = 37313348,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/37313348.jpg"
+                        },
+                        new
+                        {
+                            id = 301,
+                            Cardid = 54752875,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/54752875.jpg"
+                        },
+                        new
+                        {
+                            id = 302,
+                            Cardid = 57305373,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/57305373.jpg"
+                        },
+                        new
+                        {
+                            id = 303,
+                            Cardid = 83887306,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/83887306.jpg"
+                        },
+                        new
+                        {
+                            id = 304,
+                            Cardid = 72842870,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/72842870.jpg"
+                        },
+                        new
+                        {
+                            id = 305,
+                            Cardid = 80604092,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/80604092.jpg"
+                        },
+                        new
+                        {
+                            id = 306,
+                            Cardid = 22702055,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/22702055.jpg"
+                        },
+                        new
+                        {
+                            id = 307,
+                            Cardid = 97360116,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/97360116.jpg"
+                        },
+                        new
+                        {
+                            id = 308,
+                            Cardid = 1784619,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/1784619.jpg"
+                        },
+                        new
+                        {
+                            id = 309,
+                            Cardid = 39774685,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/39774685.jpg"
+                        },
+                        new
+                        {
+                            id = 310,
+                            Cardid = 15052462,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/15052462.jpg"
+                        },
+                        new
+                        {
+                            id = 311,
+                            Cardid = 12607053,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/12607053.jpg"
+                        },
+                        new
+                        {
+                            id = 312,
+                            Cardid = 13945283,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/13945283.jpg"
+                        },
+                        new
+                        {
+                            id = 313,
+                            Cardid = 23424603,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/23424603.jpg"
+                        },
+                        new
+                        {
+                            id = 314,
+                            Cardid = 2483611,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/2483611.jpg"
+                        },
+                        new
+                        {
+                            id = 315,
+                            Cardid = 15150365,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/15150365.jpg"
+                        },
+                        new
+                        {
+                            id = 316,
+                            Cardid = 87796900,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/87796900.jpg"
+                        },
+                        new
+                        {
+                            id = 317,
+                            Cardid = 78010363,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/78010363.jpg"
+                        },
+                        new
+                        {
+                            id = 318,
+                            Cardid = 80741828,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/80741828.jpg"
+                        },
+                        new
+                        {
+                            id = 319,
+                            Cardid = 36304921,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/36304921.jpg"
+                        },
+                        new
+                        {
+                            id = 320,
+                            Cardid = 29380133,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/29380133.jpg"
+                        },
+                        new
+                        {
+                            id = 321,
+                            Cardid = 59197169,
+                            image_url_small = "https://images.ygoprodeck.com/images/cards_small/59197169.jpg"
+                        });
+                });
+
             modelBuilder.Entity("DeckCard", b =>
                 {
                     b.Property<int>("Id")
@@ -196,13 +2146,13 @@ namespace YuGiOh.Migrations
                         {
                             Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "04e3c893-81d2-4e77-85b2-3bf0d5f2248d",
+                            ConcurrencyStamp = "b249072e-732f-48b2-a7ba-84df7045be2b",
                             Email = "admin@test.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEPsF7VTi4GQFrJyHgM5iDbCJhtNl2kJ7pIvO8Lkfqo/1yg/eMcn6McnEo0lsDpD/FQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBC6XxnXfNT1pf9+4HlzVMAukHStFrwlL5gXXQ+CyjwiC+S6DOSozr5ACLbyozX1sg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "28bcbe42-d769-4f7d-bfcf-44b1071cb31f",
+                            SecurityStamp = "4ff11a0b-7656-471e-8fa5-e7106024f657",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         },
@@ -210,13 +2160,13 @@ namespace YuGiOh.Migrations
                         {
                             Id = "4342d71c-3d92-49ea-9f84-8f3412b65679",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "bd99e82e-c2ef-4279-bf1f-9bb3b83689f0",
+                            ConcurrencyStamp = "e688cbf4-9c33-4a78-ab13-fa3d6d75848e",
                             Email = "user2@test.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEBIvVkTlusDO3yNEzu9+V8ys/dd+ygwjGlvlQ8x+ee5LHJoA4Wflv6b20kX46B4zZg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHjxDFTlv8m+LDpUMOd8bZgRXGZHwd0QjHlYNApMVRqWdfj2efHaaUmxLa1xLNDnWg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "03cc4136-742c-4809-ba55-be8e7bb11475",
+                            SecurityStamp = "61c316a2-1caf-4161-8b3c-feef45c3311d",
                             TwoFactorEnabled = false,
                             UserName = "User2"
                         },
@@ -224,13 +2174,13 @@ namespace YuGiOh.Migrations
                         {
                             Id = "33ab14e6-cca3-4fb4-84d7-99d45b1c9b05",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "038fd2b9-f239-480c-9ffd-bdfcbed365e6",
+                            ConcurrencyStamp = "ea94526c-60dc-41c3-9d2e-144e826b6084",
                             Email = "user3@test.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEC5F/+2YUJllw7wmcI46jmD9Kuvu6dJY92iOIohIV50c8XB4HZO3t5koBHW7e/9q3g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEObAfNyW60dGero6E7QvxdH1suK2e0SxC8031h/RYMsD69saa51OvM1G1D5uvAWIWg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6586563d-2826-458b-93ad-cfc7cc102969",
+                            SecurityStamp = "481cc1f1-66bb-41fb-9b57-7e7c0d62409b",
                             TwoFactorEnabled = false,
                             UserName = "User3"
                         },
@@ -238,13 +2188,13 @@ namespace YuGiOh.Migrations
                         {
                             Id = "b6d8aa7f-ae65-4feb-95ab-377d810bc270",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "28c6ac41-61f0-4b08-9ea7-d6e77d8c2623",
+                            ConcurrencyStamp = "cd23c18e-be37-4c10-beec-ff8a5e6bb08a",
                             Email = "user4@test.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEBcxmNeCmxlJZcxWGACWJTSqos3kJ0cVmbrj862cNV7TKA7ypC+p2B1ORat07ZGQOw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPfb5U3UTF0mOdKzSDhL1LIXxFg+x7ar2mZWbTALbMOobOvQ1v/NitygltxYykRzqA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c4007ce6-6fb1-4eab-8213-304100f408df",
+                            SecurityStamp = "99826db0-959a-4468-80e1-cae59470180c",
                             TwoFactorEnabled = false,
                             UserName = "User4"
                         },
@@ -252,13 +2202,13 @@ namespace YuGiOh.Migrations
                         {
                             Id = "7c8b955a-c256-4505-bf0f-468489633f5f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1bb55c8b-0a44-4cdc-96eb-e7e5bc30575d",
+                            ConcurrencyStamp = "ecc4efa8-b342-4368-af86-21386b7b5ad2",
                             Email = "user5@test.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAECUu+wfBqQUefUIIy3+ogmsHn3bJbdEg7oiUXCxuMQsq6AuJqtp5Nmy/bdxDy5tCqw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOtiYKSEz2UUUkfCNNVE0IkhRN0pNOvH+i5i4RmV2oHF1Cf0MXm5GF2Ns2/WUHteUg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cf635ef5-1c27-4622-bff0-34ba5cf0e5bc",
+                            SecurityStamp = "8d0e0944-eb5a-49ab-8c48-5e97d7e86492",
                             TwoFactorEnabled = false,
                             UserName = "User5"
                         });
@@ -4617,29 +6567,6 @@ namespace YuGiOh.Migrations
                         });
                 });
 
-            modelBuilder.Entity("YuGiOh.Models.CardImage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Cardid")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("image_url_small")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Cardid")
-                        .IsUnique();
-
-                    b.ToTable("CardImage");
-                });
-
             modelBuilder.Entity("YuGiOh.Models.UserProfile", b =>
                 {
                     b.Property<int>("Id")
@@ -4720,6 +6647,15 @@ namespace YuGiOh.Migrations
                             IdentityUserId = "7c8b955a-c256-4505-bf0f-468489633f5f",
                             LastName = "Greene"
                         });
+                });
+
+            modelBuilder.Entity("CardImage", b =>
+                {
+                    b.HasOne("YuGiOh.Models.Card", null)
+                        .WithMany("card_images")
+                        .HasForeignKey("Cardid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("DeckCard", b =>
@@ -4841,15 +6777,6 @@ namespace YuGiOh.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("YuGiOh.Models.CardImage", b =>
-                {
-                    b.HasOne("YuGiOh.Models.Card", null)
-                        .WithOne("CardImage")
-                        .HasForeignKey("YuGiOh.Models.CardImage", "Cardid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("YuGiOh.Models.UserProfile", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
@@ -4868,8 +6795,7 @@ namespace YuGiOh.Migrations
 
             modelBuilder.Entity("YuGiOh.Models.Card", b =>
                 {
-                    b.Navigation("CardImage")
-                        .IsRequired();
+                    b.Navigation("card_images");
                 });
 #pragma warning restore 612, 618
         }

@@ -2,13 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace YuGiOh.Models;
 
-public class CardImage
-{
-    public int Id { get; set; }
-    public string image_url_small { get; set; }
-    public int Cardid { get; set; } // Foreign key
-}
-
 public class Card
 {
     [Required]
@@ -35,8 +28,5 @@ public class Card
 
     public string? ygoprodeck_url { get; set; }
 
-    public CardImage CardImage { get; set; }
-
-    public string imageUrl => CardImage.image_url_small;
-
+    public List<CardImage> card_images { get; set; }
 }

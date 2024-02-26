@@ -28,4 +28,6 @@ public class CardDTO
 
     public string Ygoprodeck_url { get; set; }
 
+    public List<CardImageDTO> card_images { get; set; }
+
 }
