@@ -12,6 +12,8 @@ public class YuGiOhDbContext : IdentityDbContext<IdentityUser>
 
     public DbSet<Card> Cards { get; set; }
 
+    public DbSet<CardImage> CardImages { get; set; }
+
     public DbSet<UserDeck> UserDecks { get; set; }
 
     public DbSet<FavoriteCard> FavoriteCards { get; set; }
@@ -36,8 +38,20 @@ public class YuGiOhDbContext : IdentityDbContext<IdentityUser>
         // Deserialize JSON using System.Text.Json.JsonSerializer
         var data = System.Text.Json.JsonSerializer.Deserialize<List<Card>>(jsonContent);
 
+        int cardCount = 0;
         foreach (var item in data)
         {
+            cardCount++;
+
+            modelBuilder.Entity<CardImage>().HasData(
+                new CardImage
+                {
+                    id = cardCount,
+                    image_url_small = item.card_images[0].image_url_small,
+                    Cardid = item.id
+                }
+            );
+
             modelBuilder.Entity<Card>().HasData(
                 new Card
                 {
@@ -54,6 +68,7 @@ public class YuGiOhDbContext : IdentityDbContext<IdentityUser>
                     ygoprodeck_url = item.ygoprodeck_url
                 }
             );
+
         }
     }
 
