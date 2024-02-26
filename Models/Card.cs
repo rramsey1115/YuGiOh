@@ -28,5 +28,6 @@ public class Card
 
     public string? ygoprodeck_url { get; set; }
 
-    public List<CardImage> card_images { get; set; }
+    public List<CardImage>? card_images { get; set; }
+
 }
