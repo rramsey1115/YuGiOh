@@ -31,7 +31,7 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
               <Nav navbar>
                 <NavItem onClick={() => setOpen(false)}>
                   <NavLink tag={RRNavLink} to="/">
-                    Bikes
+                    Cards
                   </NavLink>
                 </NavItem>
               </Nav>
