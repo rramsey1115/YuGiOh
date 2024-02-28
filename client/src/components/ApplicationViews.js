@@ -3,6 +3,8 @@ import { AuthorizedRoute } from "./auth/AuthorizedRoute";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import { Home } from "./home/Home";
+import { MyCardsList } from "./myCards/MyCardsList";
+import { MyDecksList } from "./myDecks/MyDecksList";
 
 export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
   return (
@@ -16,6 +18,27 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
             </AuthorizedRoute>
           }
         />
+
+        <Route path="cards">
+          <Route path=":id"
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <MyCardsList loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
+        </Route>
+
+        <Route path="decks">
+          <Route path=":id"
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <MyDecksList loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            }
+          />
+        </Route>
+
         <Route
           path="login"
           element={<Login setLoggedInUser={setLoggedInUser} />}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink as RRNavLink } from "react-router-dom";
 import {
   Button,
@@ -8,7 +8,6 @@ import {
   NavItem,
   Navbar,
   NavbarBrand,
-  NavbarText,
   NavbarToggler,
 } from "reactstrap";
 import { logout } from "../../managers/authManager";
@@ -31,7 +30,17 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
               <Nav navbar>
                 <NavItem onClick={() => setOpen(false)}>
                   <NavLink tag={RRNavLink} to="/">
-                    Bikes
+                    Home
+                  </NavLink>
+                </NavItem>
+                <NavItem onClick={() => setOpen(false)}>
+                  <NavLink tag={RRNavLink} to={`cards/${loggedInUser.id}`}>
+                    My Cards
+                  </NavLink>
+                </NavItem>
+                <NavItem onClick={() => setOpen(false)}>
+                  <NavLink tag={RRNavLink} to={`decks/${loggedInUser.id}`}>
+                    My Decks
                   </NavLink>
                 </NavItem>
               </Nav>
