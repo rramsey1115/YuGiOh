@@ -1,4 +1,5 @@
 using System.Reflection.Metadata.Ecma335;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -53,6 +54,27 @@ public class CardController : ControllerBase
         catch (Exception ex)
         {
             return BadRequest($"Bad data: {ex}");
+        }
+    }
+
+    [HttpGet("cardId")]
+    // [Authorize]
+    public IActionResult GetCardById(int cardId)
+    {
+        try
+        {
+            Card foundCard = _dbContext.Cards.Include(c => c.card_images).FirstOrDefault(c => c.id == cardId);
+
+            if (foundCard == null)
+            {
+                return NotFound("No card found with given Id");
+            }
+
+            return Ok(foundCard);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Bad Data: {ex}");
         }
     }
 }

@@ -12,5 +12,4 @@ public class UserDeck
 
     public List<DeckCard> DeckCards { get; set; }
 
-    
 }
