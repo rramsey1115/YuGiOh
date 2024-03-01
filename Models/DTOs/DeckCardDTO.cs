@@ -10,6 +10,6 @@ public class DeckCardDTO
 
     public int UserDeckId { get; set; }
 
-    public UserDeckDTO UserDeck { get; set; }
+    public UserDeckDTO? UserDeck { get; set; }
 
 }
