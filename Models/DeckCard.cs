@@ -1,15 +1,18 @@
+
+using System.ComponentModel.DataAnnotations.Schema;
 using YuGiOh.Models;
 
 public class DeckCard
 {
     public int Id { get; set; }
 
+    [ForeignKey("Card")]
     public int CardId { get; set; }
 
-    public Card Card { get; set; }
+    public Card? Card { get; set; }
 
-    public int DeckId { get; set; }
+    [ForeignKey("UserDeck")]
+    public int UserDeckId { get; set; }
 
-    public UserDeck Deck { get; set; }
-
+    public UserDeck? UserDeck { get; set; }
 }

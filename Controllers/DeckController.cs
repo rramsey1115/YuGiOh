@@ -53,7 +53,7 @@ public class DeckController : ControllerBase
                     {
                         Id = dc.Id,
                         CardId = dc.CardId,
-                        DeckId = dc.DeckId,
+                        UserDeckId = dc.UserDeckId,
                         Card = new CardDTO
                         {
                             Id = dc.Card.id,
@@ -91,17 +91,18 @@ public class DeckController : ControllerBase
     {
         try
         {
-            List<DeckCard> foundDeckCards = _dbContext.DeckCards
-            .Where(dc => dc.DeckId == DeckId)
-            .Include(dc => dc.Card)
+            List<UserDeck> foundDeck = _dbContext.UserDecks
+            .Where(ud => ud.Id == DeckId)
+            .Include(ud => ud.DeckCards).ThenInclude(dc => dc.Card)
+            .Include(ud => ud.User)
             .ToList();
 
-            if(foundDeckCards == null)
+            if(foundDeck == null)
             {
                 return NotFound("No deck with given Id");
             }
 
-            return Ok(foundDeckCards);
+            return Ok(foundDeck);
         }
         catch (Exception ex)
         {
@@ -109,26 +110,5 @@ public class DeckController : ControllerBase
         }
     }
 
-    [HttpPost("deckId")]
-    // [Authorize]
-    public IActionResult AddCardToDeck(int deckId, int cardId)
-    {
-        try
-        {
-            DeckCard newCard = new DeckCard
-            {
-                CardId = cardId,
-                DeckId = deckId
-            };
-
-            _dbContext.DeckCards.Add(newCard);
-            _dbContext.SaveChanges();
-
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return BadRequest($"Bad Data: {ex}");
-        }
-    }
+    
 }

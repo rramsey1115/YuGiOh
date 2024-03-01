@@ -8,8 +8,8 @@ public class DeckCardDTO
 
     public CardDTO Card { get; set; }
 
-    public int DeckId { get; set; }
+    public int UserDeckId { get; set; }
 
-    public UserDeckDTO Deck { get; set; }
+    public UserDeckDTO UserDeck { get; set; }
 
 }
