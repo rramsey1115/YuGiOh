@@ -34,12 +34,12 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
                   </NavLink>
                 </NavItem>
                 <NavItem onClick={() => setOpen(false)}>
-                  <NavLink tag={RRNavLink} to={`cards/${loggedInUser.id}`}>
+                  <NavLink tag={RRNavLink} to={`mycards/${loggedInUser.id}`}>
                     My Cards
                   </NavLink>
                 </NavItem>
                 <NavItem onClick={() => setOpen(false)}>
-                  <NavLink tag={RRNavLink} to={`decks/${loggedInUser.id}`}>
+                  <NavLink tag={RRNavLink} to={`mydecks/${loggedInUser.id}`}>
                     My Decks
                   </NavLink>
                 </NavItem>

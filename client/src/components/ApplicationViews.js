@@ -19,7 +19,7 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
           }
         />
 
-        <Route path="cards">
+        <Route path="mycards">
           <Route path=":id"
             element={
               <AuthorizedRoute loggedInUser={loggedInUser}>

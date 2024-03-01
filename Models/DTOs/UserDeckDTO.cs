@@ -11,6 +11,6 @@ public class UserDeckDTO
 
     public UserProfileDTO User { get; set; }
 
-    public List<DeckCardDTO> DeckCards { get; set; }
+    public List<DeckCardDTO>? DeckCards { get; set; }
 
 }

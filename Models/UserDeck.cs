@@ -10,7 +10,6 @@ public class UserDeck
 
     public UserProfile User { get; set; }
 
-    public List<DeckCard> DeckCards { get; set; }
+    public List<DeckCard>? DeckCards { get; set; }
 
-    
 }

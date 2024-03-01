@@ -306,7 +306,7 @@ namespace YuGiOh.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     CardId = table.Column<int>(type: "integer", nullable: false),
-                    DeckId = table.Column<int>(type: "integer", nullable: false)
+                    UserDeckId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -318,8 +318,8 @@ namespace YuGiOh.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DeckCards_UserDecks_DeckId",
-                        column: x => x.DeckId,
+                        name: "FK_DeckCards_UserDecks_UserDeckId",
+                        column: x => x.UserDeckId,
                         principalTable: "UserDecks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -335,11 +335,11 @@ namespace YuGiOh.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "33ab14e6-cca3-4fb4-84d7-99d45b1c9b05", 0, "544fa032-2e0d-4844-9320-9018077a56e7", "user3@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEHHlI0BPHEoery0f57V2tQGHbaaiYoSm10VPJPBhw2/59Oou2qtL97yEKaQxE5X89g==", null, false, "8affd11c-0da7-4b53-858b-4ae9f6203cfc", false, "User3" },
-                    { "4342d71c-3d92-49ea-9f84-8f3412b65679", 0, "0e6bf933-7a76-4ae7-8a89-9e7aed3170d7", "user2@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAELhc5SxMiTlsxWm2bR2GU69y+wd80HgoJBb4U3FNzfHk7qYRTxRMfD9jDS90ZC/YBg==", null, false, "9f3e334f-b90b-4447-8a8b-dbe37e0348f0", false, "User2" },
-                    { "7c8b955a-c256-4505-bf0f-468489633f5f", 0, "6d0f37ab-db9f-439f-918e-8233c3dff5e6", "user5@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAENEVK+VdNZbIH2gikjLUXEu6GCaDJ7DMVN88jJZelNlTW63lPDio0vkmrpZHZeM3YA==", null, false, "5ab5286e-df0c-49f7-a5c7-749f22a22e80", false, "User5" },
-                    { "b6d8aa7f-ae65-4feb-95ab-377d810bc270", 0, "df501dbf-4468-4af3-a6eb-bff7575269a1", "user4@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAENkPinE0vVsDxHl8InsYocSkHcK1PWO9xoLOn8O7DMt8/6qfPdaowp6T0n2VXNTxkg==", null, false, "54c8a757-d1bb-43b1-937f-0a4977bda9e1", false, "User4" },
-                    { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "bec8390f-8ebe-4077-9064-f4249feffe6c", "admin@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEDyIae7Ubt4TkH03DV/J3e2+A8dH6YVkEpCi9gc1YNuJQQdaTPoxM26CJVV9EPUTQQ==", null, false, "4cceac43-9846-4fcc-b85e-156161a6c241", false, "Admin" }
+                    { "33ab14e6-cca3-4fb4-84d7-99d45b1c9b05", 0, "f1fe2a33-ff91-48e0-985c-ed2806dc37ae", "user3@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEPyZdThK6jab2xYYL+gCh0DjoxIXh3t5EHnyymnHlqBU8JG1/00a9TVmjytEdTW0WQ==", null, false, "1cf34156-bb46-4213-a84b-a07a8c074113", false, "User3" },
+                    { "4342d71c-3d92-49ea-9f84-8f3412b65679", 0, "4735fceb-5cf2-4420-9ee5-e14a5183e1fa", "user2@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEJtNVm63xPi7H64zK4EGOkWDKPN2xEfqr925wInmEyOgyPx30ls5NBmWW36OKxzaUQ==", null, false, "b32ffcab-8dde-40c9-914f-d03b183300e6", false, "User2" },
+                    { "7c8b955a-c256-4505-bf0f-468489633f5f", 0, "89b50aa6-965f-4c79-962e-faa720285037", "user5@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEMhgXl5ntpGoKxE9gBUYfkv/S9IV9AnvMnYKg7lZjc3y49HxCLWdm9gTXXr2wFRMYA==", null, false, "04adca46-d75f-45c0-8e9f-f34e8dbf91e1", false, "User5" },
+                    { "b6d8aa7f-ae65-4feb-95ab-377d810bc270", 0, "c879de66-7673-4cc1-bd15-c23b63d641ac", "user4@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEBlt3IdicuRd2qe3DvVT+y4ozglLxwjPVrnEYR8Iz7Cfm2ftNk0lCx5AbcPI0KtIvQ==", null, false, "5347c975-8739-4c9b-a167-731ddef461bc", false, "User4" },
+                    { "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f", 0, "57d63075-0603-4dc9-8b44-218e070f293b", "admin@test.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEMhX9OJ4EEtXgjDBFx27/4kYizBwTfp8BbHCRefdY4pGUcvzeu5YkmSuz1ge93JQ7A==", null, false, "f93bc695-e91d-4286-a91e-45839ccdc76d", false, "Admin" }
                 });
 
             migrationBuilder.InsertData(
@@ -1063,9 +1063,9 @@ namespace YuGiOh.Migrations
                 column: "CardId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DeckCards_DeckId",
+                name: "IX_DeckCards_UserDeckId",
                 table: "DeckCards",
-                column: "DeckId");
+                column: "UserDeckId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_FavoriteCards_CardId",
