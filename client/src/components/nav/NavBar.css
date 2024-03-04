@@ -1,0 +1,32 @@
+.navbar {
+    padding: 0px;
+}
+
+#navbar-logo {
+    width: 110px;
+}
+
+#logout-btn {
+    width: 80px;
+    height: 32px;
+    background-color: var(--red);
+    border-radius: 10px;
+    color: var(--white);
+    transition: ease-in-out .2s;
+}
+
+#logout-btn:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(.75);
+}
+
+#logout-btn:after {
+    filter: brightness(.5);
+}
+
+@media screen and (min-width: 400px) {
+    .collapse {
+      display: flex;
+      justify-content: space-between;
+    }
+  }

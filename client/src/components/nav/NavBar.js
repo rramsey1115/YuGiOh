@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./NavBar.css";
 import { NavLink as RRNavLink } from "react-router-dom";
 import {
   Button,
@@ -10,6 +11,7 @@ import {
   NavbarBrand,
   NavbarToggler,
 } from "reactstrap";
+import logo from "../../images/yugioh-logo.png";
 import { logout } from "../../managers/authManager";
 
 export default function NavBar({ loggedInUser, setLoggedInUser }) {
@@ -19,9 +21,9 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
 
   return (
     <div>
-      <Navbar color="light" light fixed="true" expand="lg">
+      <Navbar color="dark" dark fixed="true" expand="md">
         <NavbarBrand className="mr-auto" tag={RRNavLink} to="/">
-          Yu-Gi-Oh
+          <img id="navbar-logo" src={logo} alt="yugioh-logo"/>
         </NavbarBrand>
         {loggedInUser ? (
           <>
@@ -44,20 +46,23 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
                   </NavLink>
                 </NavItem>
               </Nav>
-            </Collapse>
-            <Button
-              color="primary"
-              onClick={(e) => {
-                e.preventDefault();
-                setOpen(false);
-                logout().then(() => {
-                  setLoggedInUser(null);
+              <button
+                id="logout-btn"
+                className="navbar-btn"
+                color="danger"
+                size="sm"
+                onClick={(e) => {
+                  e.preventDefault();
                   setOpen(false);
-                });
-              }}
-            >
-              Logout
-            </Button>
+                  logout().then(() => {
+                    setLoggedInUser(null);
+                    setOpen(false);
+                  });
+                }}
+              >
+                Logout
+              </button>
+            </Collapse>
           </>
         ) : (
           <Nav navbar>

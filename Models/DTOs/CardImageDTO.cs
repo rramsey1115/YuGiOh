@@ -1,6 +1,4 @@
 
-
-
 public class CardImageDTO
 {
     public int Id { get; set; }
