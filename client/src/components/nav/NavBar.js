@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./NavBar.css";
 import { NavLink as RRNavLink } from "react-router-dom";
 import {
-  Button,
   Collapse,
   Nav,
   NavLink,
