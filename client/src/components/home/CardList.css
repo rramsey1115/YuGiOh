@@ -1,4 +1,15 @@
+#card-list-table {
+    margin: 2em auto;
+    width: 95%;
+    max-width: 750px;
+    min-width: 380px;
+}
+
+#card-list-table > tbody > tr > td {
+    padding-top: .75em;
+}
+
 .card-icon {
-    width: 30px;
+    width: 32px;
     padding: 1px;
 }

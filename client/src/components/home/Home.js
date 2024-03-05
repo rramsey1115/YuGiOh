@@ -4,7 +4,7 @@ export const Home = ({ nloggedInUser }) => {
     return (
         <section className="container">
             <header className="header">
-                <h2>Yu-Gi-Oh Home Header</h2>
+                <h2>Cards</h2>
             </header>
             <section className="filters">
 

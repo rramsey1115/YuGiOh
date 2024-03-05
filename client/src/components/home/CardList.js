@@ -17,7 +17,7 @@ export const CardGrid = () => {
 
     
     return (
-        <table id="card-list-table" className='table-dark'>
+        <table id="card-list-table" className='card-list-table'>
             <thead>
                 <tr>
                     <td></td>
@@ -34,7 +34,7 @@ export const CardGrid = () => {
                             ? <td><img className="card-icon" alt="card icon" src={monster}/></td> 
                             : card.type == "Spell Card" ? <td><img className="card-icon" alt="card icon" src={spell}/></td>
                             : card.type == "Fusion Monster" ? <td><img className="card-icon" alt="card icon" src={extra}/></td>
-                            : card.type == "Trap Card" ? <td><img className="card-icon" alt="card icon" src={extra}/></td>
+                            : card.type == "Trap Card" ? <td><img className="card-icon" alt="card icon" src={trap}/></td>
                             : <td><img className="card-icon" alt="card icon" src={back}/></td> }
                             <td>{card.name}</td>
                             <td>{card.type}</td>
