@@ -1,4 +1,4 @@
-import { CardGrid } from "./CardGrid"
+import { CardGrid } from "./CardList"
 
 export const Home = ({ nloggedInUser }) => {
     return (
