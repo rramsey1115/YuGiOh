@@ -30,7 +30,8 @@ export const CardGrid = () => {
                 {cards.map(card => {
                     return (
                         <tr key={card.id}>
-                            {card.type == "Normal Monster" || card.type == "Flip Effect Monster" || card.type == "Effect Monster"  ? <td><img className="card-icon" alt="card icon" src={monster}/></td> 
+                            {card.type == "Normal Monster" || card.type == "Flip Effect Monster" || card.type == "Effect Monster"  
+                            ? <td><img className="card-icon" alt="card icon" src={monster}/></td> 
                             : card.type == "Spell Card" ? <td><img className="card-icon" alt="card icon" src={spell}/></td>
                             : card.type == "Fusion Monster" ? <td><img className="card-icon" alt="card icon" src={extra}/></td>
                             : card.type == "Trap Card" ? <td><img className="card-icon" alt="card icon" src={extra}/></td>
