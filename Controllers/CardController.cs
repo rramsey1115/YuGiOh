@@ -26,7 +26,9 @@ public class CardController : ControllerBase
     {
         try
         {
-            List<CardDTO> Cards = _dbContext.Cards.Include(c => c.card_images).Select(c => 
+            List<CardDTO> Cards = _dbContext.Cards
+            .OrderBy(c => c.name)
+            .Include(c => c.card_images).Select(c => 
                 new CardDTO
                 {
                     Id = c.id,

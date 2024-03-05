@@ -1,11 +1,16 @@
-export const Home = ({loggedInUser}) => {
+import { CardGrid } from "./CardList"
+
+export const Home = ({ loggedInUser }) => {
     return (
         <section className="container">
             <header className="header">
-                <h2>Yu-Gi-Oh Home Header</h2>
+                <h2>Cards</h2>
             </header>
+            <section className="filters">
+
+            </section>
             <section className="body">
-                <p>Home Body</p>
+                <CardGrid />
             </section>
         </section>
     )

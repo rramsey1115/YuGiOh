@@ -1,0 +1,20 @@
+.navbar {
+    padding: 0px;
+}
+
+.container-fluid {
+    background-color: var(--black);
+    /* border-bottom: thin solid var(--gold); */
+}
+
+#navbar-logo {
+    width: 110px;
+}
+
+
+@media screen and (min-width: 400px) {
+    .collapse {
+      display: flex;
+      justify-content: space-between;
+    }
+}

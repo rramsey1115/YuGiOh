@@ -1,0 +1,23 @@
+#card-list-table {
+    margin: 2em auto;
+    width: 95%;
+    max-width: 750px;
+    min-width: 380px;
+}
+
+#card-list-table > tbody > tr > td {
+    padding: .5em;
+}
+
+.card-table-tr {
+    cursor: pointer;
+}
+
+.card-table-tr:hover {
+    background-color: var(--gray);
+}
+
+.card-icon {
+    width: 32px;
+    padding: 1px;
+}
