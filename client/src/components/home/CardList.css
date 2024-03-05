@@ -6,7 +6,15 @@
 }
 
 #card-list-table > tbody > tr > td {
-    padding-top: .75em;
+    padding: .5em;
+}
+
+.card-table-tr {
+    cursor: pointer;
+}
+
+.card-table-tr:hover {
+    background-color: var(--gray);
 }
 
 .card-icon {

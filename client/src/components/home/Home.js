@@ -1,6 +1,6 @@
 import { CardGrid } from "./CardList"
 
-export const Home = ({ nloggedInUser }) => {
+export const Home = ({ loggedInUser }) => {
     return (
         <section className="container">
             <header className="header">
