@@ -47,8 +47,7 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
                 </NavItem>
               </Nav>
               <button
-                id="logout-btn"
-                className="navbar-btn"
+                className="logout-btn"
                 color="danger"
                 size="sm"
                 onClick={(e) => {
@@ -68,7 +67,7 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
           <Nav navbar>
             <NavItem>
               <NavLink tag={RRNavLink} to="/login">
-                <Button color="primary">Login</Button>
+                <button className="logout-btn">Login</button>
               </NavLink>
             </NavItem>
           </Nav>

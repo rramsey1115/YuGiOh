@@ -21,3 +21,22 @@ code {
   min-width:375px !important;
   margin: 1rem auto !important;
 }
+
+.logout-btn {
+  width: 80px;
+  height: 36px;
+  background-color: var(--red);
+  border-radius: 8px;
+  color: var(--white);
+  transition: ease-in-out .2s;
+  margin: 5px;
+}
+
+.logout-btn:hover {
+  transition: ease-in-out .2s;
+  filter: brightness(.75);
+}
+
+.logout-btn:after {
+  filter: brightness(.5);
+}
