@@ -59,8 +59,8 @@ public class CardController : ControllerBase
         }
     }
 
-    [HttpGet("cardId")]
-    // [Authorize]
+    [HttpGet("{cardId}")]
+    [Authorize]
     public IActionResult GetCardById(int cardId)
     {
         try

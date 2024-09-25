@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { getAllCards } from '../../managers/cardManager';
+import { getAllCards, getCardById } from '../../managers/cardManager';
 import "./CardList.css";
 import monster from "../../images/monster-card-template.png";
 import extra from "../../images/extra-deck-template.png";
@@ -20,7 +20,7 @@ export const CardGrid = () => {
     const navigate = useNavigate();
 
     const handleCardClick = (e) => {
-        navigate(`card/${e.currentTarget.dataset.cardId}`);
+        navigate(`cardInfo/${e.currentTarget.dataset.cardId}`);
     }
 
     return (
@@ -46,11 +46,11 @@ export const CardGrid = () => {
                                 handleCardClick(e)
                             }}
                         >
-                            {card.type == "Normal Monster" || card.type == "Flip Effect Monster" || card.type == "Effect Monster"  
+                            {card.type === "Normal Monster" || card.type === "Flip Effect Monster" || card.type === "Effect Monster"  
                             ? <td><img className="card-icon" alt="card icon" src={monster}/></td> 
-                            : card.type == "Spell Card" ? <td><img className="card-icon" alt="card icon" src={spell}/></td>
-                            : card.type == "Fusion Monster" ? <td><img className="card-icon" alt="card icon" src={extra}/></td>
-                            : card.type == "Trap Card" ? <td><img className="card-icon" alt="card icon" src={trap}/></td>
+                            : card.type === "Spell Card" ? <td><img className="card-icon" alt="card icon" src={spell}/></td>
+                            : card.type === "Fusion Monster" ? <td><img className="card-icon" alt="card icon" src={extra}/></td>
+                            : card.type === "Trap Card" ? <td><img className="card-icon" alt="card icon" src={trap}/></td>
                             : <td><img className="card-icon" alt="card icon" src={back}/></td> }
                             <td 
                                

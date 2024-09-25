@@ -5,6 +5,7 @@ import Register from "./auth/Register";
 import { Home } from "./home/Home";
 import { MyCardsList } from "./myCards/MyCardsList";
 import { MyDecksList } from "./myDecks/MyDecksList";
+import { CardInfo } from "./cardInfo/CardInfo";
 
 export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
   return (
@@ -14,10 +15,19 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
           index
           element={
             <AuthorizedRoute loggedInUser={loggedInUser}>
-              <Home loggedInUser={loggedInUser}/>
+              <Home loggedInUser={loggedInUser} />
             </AuthorizedRoute>
           }
         />
+
+        <Route path="cardInfo">
+          <Route path=":id"
+            element={
+              <AuthorizedRoute loggedInUser={loggedInUser}>
+                <CardInfo loggedInUser={loggedInUser} />
+              </AuthorizedRoute>
+            } />
+        </Route>
 
         <Route path="mycards">
           <Route path=":id"
