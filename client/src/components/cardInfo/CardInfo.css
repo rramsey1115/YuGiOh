@@ -1,0 +1,41 @@
+
+/* mobile/tablet */
+@media (width <= 1000px) {
+    #card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #card-info_data {
+        border: 3px solid green;
+    }
+
+
+
+}
+
+
+/* laptop/desktop */
+@media (width > 1000px) {
+    #card-info {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #card-info_data {
+        border: 3px solid green;
+    }
+}
+
+#attr-div {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

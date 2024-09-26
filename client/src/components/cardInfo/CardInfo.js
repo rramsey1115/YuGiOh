@@ -3,9 +3,10 @@ import "./CardInfo.css";
 import { useEffect, useState } from "react";
 import { getCardById } from "../../managers/cardManager";
 import { useParams } from "react-router-dom";
+import { CardData } from "./CardData";
 
 export const CardInfo = () => {
-    const {id} = useParams()
+    const { id } = useParams()
     const [card, setCard] = useState({});
 
     useEffect(() => {
@@ -15,21 +16,16 @@ export const CardInfo = () => {
     const getAndSetCardById = (id) => {
         getCardById(id).then(setCard)
     }
-    
-    return (
-        !card.name ? <Spinner /> : 
+
+    return (!card.name ? <Spinner /> :
         <>
-        {console.log(card)}
-            <h1>Card Info</h1>
-            <h3>Name: {card.name}</h3>
-            <h3>Attack: {card.atk}</h3>
-            <h3>Defense: {card.def}</h3>
-            <h3>Attribute: {card.attribute}</h3>
-            <h3>Description: {card.desc}</h3>
-            <h3>Race: {card.race}</h3>
-            <h3>Level: {card.level}</h3>
-            <h3>Type: {card.type}</h3>
-            {/* <img id="card-image" src={card.card_images[0].image_url_small} alt={`${card.name} card`} /> */}
+            <h1 id="card-info_title">{card.name}</h1>
+            <section id="card-info">
+                <CardData card={card} />
+                <div id="card-info_img-container">
+                    <img id="card-image" src={card.card_images[0].image_url_small} alt={`${card.name} card`} />
+                </div>
+            </section >
         </>
     )
 }
