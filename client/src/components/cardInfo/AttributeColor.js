@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
 
 export const AttributeColor = ({attribute}) => {
-    console.log("attribute", attribute);
-
-    const [bgColor, setBgColor] = useState("transparent");
+     const [bgColor, setBgColor] = useState("transparent");
     const [textColor, setTextColor] = useState("black");
 
     const colors = [
@@ -33,10 +31,10 @@ export const AttributeColor = ({attribute}) => {
     useEffect(() => {
         if(attribute) {
             const foundType = colors.find((c) => c.type.toLowerCase() === attribute.toLowerCase())
-            console.log(foundType);
             setBgColor(foundType.color)
             setTextColor(foundType.textColor)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [attribute])
 
 
