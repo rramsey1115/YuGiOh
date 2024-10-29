@@ -26,7 +26,8 @@ export const AttributeColor = ({attribute}) => {
         {type: "steel", color:'dimGrey', textColor:'black'},
         {type: "fairy", color:'fuchsia', textColor:'black'},
         {type: "light", color:'antiqueWhite', textColor:'black'},
-        {type: "earth", color:'brown', textColor:'white'}
+        {type: "earth", color:'brown', textColor:'white'},
+        {type:"wind", color:"lightSkyBlue", textColor: "black"}
     ]
 
     useEffect(() => {

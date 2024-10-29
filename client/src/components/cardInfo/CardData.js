@@ -1,5 +1,6 @@
 import { Spinner } from "reactstrap"
 import { AttributeColor } from "./AttributeColor"
+import { CardLevel } from "./CardLevel"
 
 export const CardData = ({ card }) => {
  
@@ -12,7 +13,7 @@ export const CardData = ({ card }) => {
             <p>Race: {card.race ?? "N/A"}</p>
             <p>Attack: {card.atk ?? "N/A"}</p>
             <p>Defense: {card.def ?? "N/A"}</p>
-            <p>Level: {card.level ?? "N/A"}</p>
+            <p>Level: {card.level ? <CardLevel levelNum={card.level}/> : "N/A"}</p>
         </div>
     )
 }
