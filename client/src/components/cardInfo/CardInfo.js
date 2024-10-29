@@ -19,7 +19,6 @@ export const CardInfo = () => {
 
     return (!card.name ? <Spinner /> :
         <>
-            <h1 id="card-info_title">{card.name}</h1>
             <section id="card-info">
                 <CardData card={card} />
                 <div id="card-info_img-container">

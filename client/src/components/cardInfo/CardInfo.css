@@ -8,34 +8,43 @@
         align-items: center;
     }
 
-    #card-info_data {
-        border: 3px solid green;
-    }
-
-
-
 }
-
 
 /* laptop/desktop */
 @media (width > 1000px) {
     #card-info {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: left;
     }
 
-    #card-info_data {
-        border: 3px solid green;
-    }
+}
+
+
+/* all sizes */
+#card-info {
+    margin: 30px 5px;
 }
 
 #attr-div {
     width: 100px;
     height: 40px;
-    border: 1px solid black;
+    border: 2px solid black;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 12px 2px;
+}
+
+#card-info_data {
+    /* border: 1px solid green; */
+    max-width: 700px;
+    min-width: 330px;
+    margin: 12px;
+}
+
+#card-image {
+    width: 300px;
+    margin: 20px;
 }

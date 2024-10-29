@@ -1,19 +1,18 @@
-import { useEffect, useState } from "react"
 import { Spinner } from "reactstrap"
 import { AttributeColor } from "./AttributeColor"
 
 export const CardData = ({ card }) => {
  
-
     return (!card.name ? <Spinner /> :
         <div id="card-info_data">
-            <h5>{card.desc ?? "unknown"}</h5>
+            <h1 id="card-info_title">{card.name}</h1>
+            <h5>{card.desc ?? "N/A"}</h5>
             <AttributeColor attribute={card.attribute} />
-            <p>Attack: {card.atk ?? "unknown"}</p>
-            <p>Defense: {card.def ?? "unknown"}</p>
-            <p>Race: {card.race ?? "unknown"}</p>
-            <p>Level: {card.level ?? "unknown"}</p>
-            <p>Type: {card.type ?? "unknown"}</p>
+            <p>Type: {card.type ?? "N/A"}</p>
+            <p>Race: {card.race ?? "N/A"}</p>
+            <p>Attack: {card.atk ?? "N/A"}</p>
+            <p>Defense: {card.def ?? "N/A"}</p>
+            <p>Level: {card.level ?? "N/A"}</p>
         </div>
     )
 }
