@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getCardById } from "../../managers/cardManager";
 import { useParams } from "react-router-dom";
 import { CardData } from "./CardData";
+import { CardInfoButtons } from "./CardInfoButtons";
 
 export const CardInfo = () => {
     const { id } = useParams()
@@ -25,6 +26,7 @@ export const CardInfo = () => {
                     <img id="card-image" src={card.card_images[0].image_url_small} alt={`${card.name} card`} />
                 </div>
             </section >
+            {card ? <CardInfoButtons card={card} /> : <Spinner/>}
         </>
     )
 }

@@ -28,7 +28,7 @@ public class CardController : ControllerBase
         {
             List<CardDTO> Cards = _dbContext.Cards
             .OrderBy(c => c.name)
-            .Include(c => c.card_images).Select(c => 
+            .Include(c => c.card_images).Select(c =>
                 new CardDTO
                 {
                     Id = c.id,
@@ -69,7 +69,7 @@ public class CardController : ControllerBase
 
             if (foundCard == null)
             {
-                return NotFound("No card found with given Id");
+                return NotFound($"No card found with given Id of {cardId}");
             }
 
             return Ok(foundCard);
@@ -77,6 +77,79 @@ public class CardController : ControllerBase
         catch (Exception ex)
         {
             return BadRequest($"Bad Data: {ex}");
+        }
+    }
+
+
+    [HttpGet("userCards/{userId}")]
+    public IActionResult GetUserCardsByUserId(int userId)
+    {
+        try
+        {
+            List<UserCard> foundCards = _dbContext.UserCards.Include(userCard => userCard.Card).ThenInclude(card => card.card_images).Where(userCard => userCard.UserId == userId).ToList();
+
+            if (foundCards == null)
+            {
+                return NotFound("No user cards found");
+            }
+
+            return Ok(foundCards);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Bad Data: {ex}");
+        }
+    }
+
+    [HttpPost("userCards/add/{cardId}/{userId}")]
+    public IActionResult AddCardToFavorites(int cardId, int userId)
+    {
+        try
+        {
+            // Check if the UserCard already exists
+            var existingUserCard = _dbContext.UserCards
+                .FirstOrDefault(uc => uc.CardId == cardId && uc.UserId == userId);
+
+            if (existingUserCard != null)
+            {
+                return Conflict($"Card with CardId={cardId} is already in the favorites for UserId={userId}.");
+            }
+
+            _dbContext.UserCards.Add(new UserCard
+            {
+                UserId = userId,
+                CardId = cardId
+            }
+            );
+            _dbContext.SaveChanges();
+            return Ok(new { UserId = userId, CardId = cardId});
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Bad Request - Exception: {ex}");
+        }
+    }
+
+
+    [HttpDelete("userCards/remove/{cardId}/{userId}")]
+    public IActionResult RemoveCardFromMyDeck(int cardId, int userId)
+    {
+        try
+        {
+            UserCard foundUserCard = _dbContext.UserCards.FirstOrDefault(uc => uc.CardId == cardId && uc.UserId == userId);
+
+            if (foundUserCard == null)
+            {
+                return NotFound($"No Card found with matching CardId={cardId} and UserId={userId}");
+            }
+            _dbContext.UserCards.Remove(foundUserCard);
+            _dbContext.SaveChanges();
+
+            return Ok(foundUserCard);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Bad Request - Exception: {ex}");
         }
     }
 }
