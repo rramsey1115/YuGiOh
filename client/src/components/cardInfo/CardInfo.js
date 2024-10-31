@@ -24,9 +24,9 @@ export const CardInfo = () => {
                 <CardData card={card} />
                 <div id="card-info_img-container">
                     <img id="card-image" src={card.card_images[0].image_url_small} alt={`${card.name} card`} />
+                    {card ? <CardInfoButtons card={card} /> : <Spinner />}
                 </div>
             </section >
-            {card ? <CardInfoButtons card={card} /> : <Spinner/>}
         </>
     )
 }

@@ -50,21 +50,20 @@ export const CardInfoButtons = ({ card }) => {
     return (
         <div id="card-info_buttons">
             {isMyCard ? (
-                <Button
-                    className="card-info_btn btn-secondary"
+                <button
+                    className="card-info_btn button"
                     id="info-remove_btn"
                     onClick={() => { removeFromMyCards(user.id, card.id) }}>
                     Remove from My Cards
-                </Button>
+                </button>
             ) : (
-                <Button
-                    className="card-info_btn btn"
+                <button
+                    className="card-info_btn button"
                     id="info-add_btn"
                     onClick={() => { addToMyCards(user.id, card.id) }}>
                     Add to My Cards
-                </Button>
+                </button>
             )}
-            <Button className="card-info_btn btn-primary" id="info-fav__btn">Favorite</Button>
         </div>
     );
 }

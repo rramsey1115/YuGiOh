@@ -9,6 +9,7 @@ import trap from "../../images/trap-card-template.png";
 import back from "../../images/back-card-template.jpg";
 import { useNavigate } from 'react-router-dom';
 import { Spinner } from 'reactstrap';
+import { CardLevelStars } from './CardLevelStars';
 
 export const CardGrid = () => {
     const [cards, setCards] = useState([]);
@@ -23,6 +24,11 @@ export const CardGrid = () => {
         navigate(`cardInfo/${e.currentTarget.dataset.cardId}`);
     }
 
+    const convertAtt = (str) => {
+        if(!str) { return ""}
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
     return (
         !cards ? <Spinner />
         :
@@ -32,11 +38,14 @@ export const CardGrid = () => {
                     <td></td>
                     <td><h4>Name</h4></td>
                     <td><h4>Type</h4></td>
-                    <td><h4>Race</h4></td>
+                    <td><h4>Attribute</h4></td>
+                    <td><h4>Level</h4></td>
                 </tr>
             </thead>
             <tbody>  
                 {cards.map(card => {
+                    
+
                     return (
                         <tr 
                             className="card-table-tr"
@@ -56,7 +65,8 @@ export const CardGrid = () => {
                                
                             >{card.name}</td>
                             <td>{card.type}</td>
-                            <td>{card.race}</td>
+                            <td>{convertAtt(card.attribute)}</td>
+                            <td><CardLevelStars levelNum={card.level} /></td>
                         </tr>
                     )
                 })}

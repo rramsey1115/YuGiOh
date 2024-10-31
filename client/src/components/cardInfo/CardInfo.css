@@ -1,6 +1,5 @@
-
 /* mobile/tablet */
-@media (width <= 1000px) {
+@media (width <=1000px) {
     #card-info {
         display: flex;
         flex-direction: column;
@@ -47,4 +46,26 @@
 #card-image {
     width: 300px;
     margin: 20px;
+}
+
+#card-info_buttons {
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* add/remove buttons */
+.card-info_btn {
+    width: 200px;
+    margin: 2px;
+}
+
+#info-remove_btn {
+
+}
+
+#info-add_btn {
+    background-color: var(--gold);
+    color: var(--black);
 }

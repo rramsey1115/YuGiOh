@@ -46,9 +46,7 @@ export default function NavBar({ loggedInUser, setLoggedInUser }) {
                 </NavItem>
               </Nav>
               <button
-                className="logout-btn"
-                color="danger"
-                size="sm"
+                className="button"
                 onClick={(e) => {
                   e.preventDefault();
                   setOpen(false);

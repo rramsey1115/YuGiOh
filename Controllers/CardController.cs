@@ -136,7 +136,8 @@ public class CardController : ControllerBase
     {
         try
         {
-            UserCard foundUserCard = _dbContext.UserCards.FirstOrDefault(uc => uc.CardId == cardId && uc.UserId == userId);
+            UserCard foundUserCard = _dbContext.UserCards
+            .FirstOrDefault(uc => uc.CardId == cardId && uc.UserId == userId);
 
             if (foundUserCard == null)
             {
