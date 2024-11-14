@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { getAllCards, getCardById } from '../../managers/cardManager';
+import { getAllCards } from '../../managers/cardManager';
 import "./CardList.css";
 import monster from "../../images/monster-card-template.png";
 import extra from "../../images/extra-deck-template.png";

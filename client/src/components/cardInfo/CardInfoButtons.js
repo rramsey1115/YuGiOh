@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
-import { Button, Spinner } from "reactstrap";
+import { Spinner } from "reactstrap";
 import { addUserCard, getUserCardsByUserId, removeUserCard } from "../../managers/cardManager";
 import { Context } from "../ApplicationViews";
 
