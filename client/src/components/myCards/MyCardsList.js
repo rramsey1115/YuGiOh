@@ -19,7 +19,7 @@ export const MyCardsList = () => {
 
     const [myCards, setMyCards] = useState([]);
 
-    useEffect(() => { getAndSetMyCards() }, [])
+    useEffect(() => { getAndSetMyCards() })
 
     const getAndSetMyCards = () => { getUserCardsByUserId(user.id).then(setMyCards) };
 
@@ -53,7 +53,7 @@ export const MyCardsList = () => {
                             <td></td>
                             <td><h4>Name</h4></td>
                             <td><h4>Type</h4></td>
-                            <td><h4>Attribute</h4></td>
+                            <td><h4>Attr</h4></td>
                             <td><h4>Level</h4></td>
                         </tr>
                     </thead>
