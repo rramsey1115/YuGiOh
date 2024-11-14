@@ -20,7 +20,7 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
             index
             element={
               <AuthorizedRoute loggedInUser={loggedInUser}>
-                <Home loggedInUser={loggedInUser} />
+                <Home />
               </AuthorizedRoute>
             }
           />
@@ -29,7 +29,7 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
             <Route path=":id"
               element={
                 <AuthorizedRoute loggedInUser={loggedInUser}>
-                  <CardInfo loggedInUser={loggedInUser} />
+                  <CardInfo />
                 </AuthorizedRoute>
               } />
           </Route>
@@ -38,17 +38,17 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
             <Route path=":id"
               element={
                 <AuthorizedRoute loggedInUser={loggedInUser}>
-                  <MyCardsList loggedInUser={loggedInUser} />
+                  <MyCardsList />
                 </AuthorizedRoute>
               }
             />
           </Route>
 
-          <Route path="decks">
+          <Route path="myDecks">
             <Route path=":id"
               element={
                 <AuthorizedRoute loggedInUser={loggedInUser}>
-                  <MyDecksList loggedInUser={loggedInUser} />
+                  <MyDecksList />
                 </AuthorizedRoute>
               }
             />

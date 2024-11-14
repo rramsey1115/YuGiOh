@@ -20,7 +20,7 @@ public class DeckController : ControllerBase
         _dbContext = context;
     }
 
-    [HttpGet("userId")]
+    [HttpGet("userDeck/userId/{userId}")]
     // [Authorize]
     public IActionResult GetUserDecks(int userId)
     {
@@ -85,7 +85,7 @@ public class DeckController : ControllerBase
         }
     }
 
-    [HttpGet("deckId")]
+    [HttpGet("{deckId}")]
     // [Authorize]
     public IActionResult GetCardsByDeckId(int DeckId)
     {

@@ -19,7 +19,7 @@ export const MyCardsList = () => {
 
     const [myCards, setMyCards] = useState([]);
 
-    useEffect(() => { getAndSetMyCards() })
+    useEffect(() => { getAndSetMyCards() }, [])
 
     const getAndSetMyCards = () => { getUserCardsByUserId(user.id).then(setMyCards) };
 

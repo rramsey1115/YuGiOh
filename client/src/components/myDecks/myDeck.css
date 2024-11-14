@@ -1,0 +1,6 @@
+.deck-container {
+    width: 50%;
+    border: 1px solid var(--red);
+    margin: 8px 0px;
+    padding: 8px;
+}
