@@ -1,10 +1,10 @@
-import { CardGrid } from "./CardList"
+import { CardGrid } from "./CardGrid"
 
-export const Home = ({ loggedInUser }) => {
+export const Home = () => {
     return (
         <section className="container">
             <header className="header">
-                <h2>Cards</h2>
+                <h1>Cards</h1>
             </header>
             <section className="filters">
 
