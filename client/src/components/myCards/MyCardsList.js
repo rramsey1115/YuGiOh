@@ -16,7 +16,6 @@ import { CardLevelStars } from "../home/CardLevelStars";
 export const MyCardsList = () => {
 
     const user = useContext(Context);
-    console.log("user:", user)
 
     const [myCards, setMyCards] = useState([]);
 
@@ -42,7 +41,10 @@ export const MyCardsList = () => {
                 <h1>My Cards</h1>
             </header>
             <section className="filters">
-
+                <h5 className="filter-item">Filter By:</h5>
+                <h5 className="filter-item">Level</h5>
+                <h5 className="filter-item">Type</h5>
+                <h5 className="filter-item">Attribute</h5>
             </section>
             <section className="body">
                 <table id="card-list-table" className='card-list-table'>
@@ -56,7 +58,6 @@ export const MyCardsList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {console.log('myCards', myCards)}
                         {myCards?.map(mc => {
                             return (
                                 <tr

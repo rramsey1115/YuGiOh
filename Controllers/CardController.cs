@@ -86,7 +86,12 @@ public class CardController : ControllerBase
     {
         try
         {
-            List<UserCard> foundCards = _dbContext.UserCards.Include(userCard => userCard.Card).ThenInclude(card => card.card_images).Where(userCard => userCard.UserId == userId).ToList();
+            List<UserCard> foundCards = _dbContext.UserCards
+            .Include(userCard => userCard.Card)
+            .ThenInclude(card => card.card_images)
+            .Where(userCard => userCard.UserId == userId)
+            .OrderBy(userCard => userCard.Card.name)
+            .ToList();
 
             if (foundCards == null)
             {

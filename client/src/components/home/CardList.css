@@ -21,3 +21,18 @@
     width: 32px;
     padding: 1px;
 }
+
+/* filters area */
+.filters {
+    margin: 2em auto;
+    width: 95%;
+    max-width: 750px;
+    min-width: 380px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.filter-item {
+    width: 100px;
+}
