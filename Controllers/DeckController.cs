@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -32,11 +33,13 @@ public class DeckController : ControllerBase
             .Where(d => d.UserId == userId)
             .ToList();
 
-            if (foundDecks == null) {
+            if (foundDecks == null)
+            {
                 return NotFound();
             }
 
-            return Ok(foundDecks.Select(deck => {
+            return Ok(foundDecks.Select(deck =>
+            {
                 return new UserDeckDTO
                 {
                     Id = deck.Id,
@@ -48,7 +51,7 @@ public class DeckController : ControllerBase
                         FirstName = deck.User.FirstName,
                         LastName = deck.User.LastName
                     },
-                    DeckCards = deck.DeckCards.Select(dc => 
+                    DeckCards = deck.DeckCards.Select(dc =>
                     new DeckCardDTO
                     {
                         Id = dc.Id,
@@ -85,19 +88,49 @@ public class DeckController : ControllerBase
         }
     }
 
-    [HttpGet("{deckId}")]
+    [HttpGet("DeckId/{DeckId}")]
     // [Authorize]
-    public IActionResult GetCardsByDeckId(int DeckId)
+    public IActionResult GetDeckByDeckId(int DeckId)
     {
         try
         {
-            List<UserDeck> foundDeck = _dbContext.UserDecks
+            var foundDeck = _dbContext.UserDecks
             .Where(ud => ud.Id == DeckId)
-            .Include(ud => ud.DeckCards).ThenInclude(dc => dc.Card)
-            .Include(ud => ud.User)
-            .ToList();
+            .Include(ud => ud.DeckCards).ThenInclude(dc => dc.Card).ThenInclude(card => card.card_images)
+            .Select(ud => new UserDeckDTO
+            {
+                Id = ud.Id,
+                Name = ud.Name,
+                UserId = ud.UserId,
+                DeckCards = ud.DeckCards.Select(dc => new DeckCardDTO
+                {
+                    Id = dc.Id,
+                    CardId = dc.CardId,
+                    Card = new CardDTO
+                    {
+                        Id = dc.Card.id,
+                        Name = dc.Card.name,
+                        Type = dc.Card.type,
+                        FrameType = dc.Card.frameType,
+                        Desc = dc.Card.desc,
+                        Atk = dc.Card.atk,               // Include attack value
+                        Def = dc.Card.def,               // Include defense value
+                        Level = dc.Card.level,           // Include level
+                        Attribute = dc.Card.attribute,   // Include attribute
+                        Race = dc.Card.race,
+                        Ygoprodeck_url = dc.Card.ygoprodeck_url,
+                        card_images = dc.Card.card_images.Select(ci => new CardImageDTO
+                        {
+                            Id = ci.id,
+                            ImageUrl = ci.image_url_small,
+                            Cardid = ci.Cardid
+                        }).ToList()
+                    },
+                    UserDeckId = dc.UserDeckId
+                }).ToList()
+            }).ToList();
 
-            if(foundDeck == null)
+            if (foundDeck.Count == 0)
             {
                 return NotFound("No deck with given Id");
             }
@@ -110,5 +143,5 @@ public class DeckController : ControllerBase
         }
     }
 
-    
+
 }

@@ -1,4 +1,5 @@
 
+using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -43,7 +44,7 @@ public class DeckCardController : ControllerBase
         }
     }
 
-    [HttpGet("deckId")]
+    [HttpGet("deckId/{deckId}")]
     // [Authorize]
     public IActionResult GetDeckCardsByDeckId(int deckId)
     {
@@ -64,7 +65,10 @@ public class DeckCardController : ControllerBase
             List<DeckCard> DeckCards = _dbContext.DeckCards
             .Include(dc => dc.Card).ThenInclude(c => c.card_images)
             .Where(dc => dc.UserDeckId == deckId)
+            .Include(dc => dc.UserDeck)
             .ToList();
+
+            // UserDeck foundUserDeck = _dbContext.UserDecks.FirstOrDefault(ud => ud.Id == deckId);
 
             return Ok(DeckCards.Select(dc => 
                 new DeckCardDTO
@@ -91,7 +95,12 @@ public class DeckCardController : ControllerBase
                             Cardid = ci.Cardid
                         }).ToList()
                     },
-                    UserDeckId = dc.UserDeckId
+                    UserDeckId = dc.UserDeckId,
+                    UserDeck = new UserDeckDTO {
+                        Id = foundDeck.Id,
+                        Name = foundDeck.Name,
+                        UserId = foundDeck.UserId
+                    }
                 }).ToList()
             );
 

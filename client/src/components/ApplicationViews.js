@@ -7,6 +7,7 @@ import { MyCardsList } from "./myCards/MyCardsList";
 import { MyDecksList } from "./myDecks/MyDecksList";
 import { CardInfo } from "./cardInfo/CardInfo";
 import React from "react";
+import { DeckDetails } from "./myDecks/DeckDetails";
 
 export const Context = React.createContext();
 
@@ -52,6 +53,13 @@ export default function ApplicationViews({ loggedInUser, setLoggedInUser }) {
                 </AuthorizedRoute>
               }
             />
+            <Route path="details">
+              <Route path=":deckId" element={
+                <AuthorizedRoute loggedInUser={loggedInUser}>
+                  <DeckDetails />
+                </AuthorizedRoute>
+              } />
+            </Route>
           </Route>
 
           <Route
