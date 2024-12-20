@@ -17,7 +17,7 @@ export const MyDecksList = () => {
 
     return (myDecks.length === 0 || !myDecks ? <Spinner /> :
         <section className="container">
-            {console.log("myDecks", myDecks)}
+            {/* {console.log("myDecks", myDecks)} */}
             <header className="header">
                 <h1>My Decks</h1>
             </header>

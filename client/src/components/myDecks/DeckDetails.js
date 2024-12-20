@@ -20,7 +20,7 @@ export const DeckDetails = () => {
     }
 
     return (!deck.deckCards ? <Spinner /> : <>
-        {console.log("deck", deck)}
+        {/* {console.log("deck", deck)} */}
         <section className="container" id="deck-main">
             <section className="header" id="deck-header">
                 <h1 id="deck-header_title">Deck: {deck.name}</h1>
