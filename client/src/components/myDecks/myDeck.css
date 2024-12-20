@@ -1,8 +1,16 @@
 .deck-container {
     width: 50%;
-    border: 1px solid var(--red);
+    border: 1px solid var(--gray);
     margin: 8px 0px;
     padding: 8px;
+    cursor: pointer;
+    transition: all .2s;
+    border-radius: 10px;
+}
+
+.deck-container:hover {
+    transition: all .2s;
+    background-color: rgba(128, 128, 128, 0.162);
 }
 
 .deck-card {
