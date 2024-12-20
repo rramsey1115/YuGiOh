@@ -2,7 +2,7 @@ import { Spinner } from "reactstrap"
 import "./myDeck.css"
 
 export const DeckCard = ({ card }) => {
-    console.log("card:", card)
+    // console.log("card:", card)
 
     return (!card ? <Spinner /> :
         <div className="deck-card">

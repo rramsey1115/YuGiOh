@@ -26,7 +26,7 @@ export const MyCardsList = () => {
     const navigate = useNavigate();
 
     const handleCardClick = (e) => {
-        console.log("event", e.currentTarget)
+        // console.log("event", e.currentTarget)
         navigate(`/cardInfo/${e.currentTarget.dataset.cardId}`);
     }
 

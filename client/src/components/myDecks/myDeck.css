@@ -10,7 +10,7 @@
 
 .deck-container:hover {
     transition: all .2s;
-    background-color: rgba(128, 128, 128, 0.162);
+    background-color: rgba(128, 128, 128, 0.367);
 }
 
 .deck-card {

@@ -35,13 +35,13 @@ export const CardInfoButtons = ({ card }) => {
     const addToMyCards = async (userId, cardId) => {
         await addUserCard(cardId, userId);
         await getAndSetMyCards(user.id);
-        console.log(`addToMyCards called - UserId=${userId}, CardId=${cardId}`);
+        // console.log(`addToMyCards called - UserId=${userId}, CardId=${cardId}`);
     };
 
     const removeFromMyCards = async (userId, cardId) => {
         await removeUserCard(cardId, userId);
         await getAndSetMyCards(user.id);
-        console.log(`RemoveFromMyCards Called - UserId=${userId}, CardId=${cardId}`);
+        // console.log(`RemoveFromMyCards Called - UserId=${userId}, CardId=${cardId}`);
     };
 
     if (loading) {
