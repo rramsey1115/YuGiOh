@@ -20,9 +20,9 @@ public class DeckCardController : ControllerBase
         _dbContext = context;
     }
 
-    [HttpPost("cardId/deckId")]
+    [HttpPost("add/{cardId}/{deckId}")]
     // [Authorize]
-    public IActionResult AddCardToDeck(int deckId, int cardId)
+    public IActionResult AddCardToDeck(int cardId, int deckId)
     {
         try
         {

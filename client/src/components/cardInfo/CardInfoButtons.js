@@ -1,36 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useContext, useEffect, useState } from "react";
+
 import { Spinner } from "reactstrap";
-import { addUserCard, getUserCardsByUserId, removeUserCard } from "../../managers/cardManager";
-import { Context } from "../ApplicationViews";
+import { addUserCard, removeUserCard } from "../../managers/cardManager";
+import { AddToDeckBtn } from "./AddToDeckBtn";
+import { addCardToDeckCards } from "../../managers/deckManager";
 
-export const CardInfoButtons = ({ card }) => {
-    const user = useContext(Context);
-    const [myCards, setMyCards] = useState([]);
-    const [isMyCard, setIsMyCard] = useState(false);
-    const [loading, setLoading] = useState(true); // New loading state
-
-    useEffect(() => {
-        if (user) {
-            getAndSetMyCards(user.id);
-        }
-    }, [user]);
-
-    useEffect(() => {
-        findOutIfIsMyCard();
-    }, [myCards, card]);
-
-    const getAndSetMyCards = async (id) => {
-        setLoading(true); // Start loading
-        const res = await getUserCardsByUserId(id);
-        setMyCards(res);
-        setLoading(false); // Stop loading
-    };
-
-    const findOutIfIsMyCard = () => {
-        const bool = myCards.some(myCard => myCard.card.id === card.id);
-        setIsMyCard(bool);
-    };
+export const CardInfoButtons = ({ card, user, isMyCard, getAndSetMyCards }) => {
 
     const addToMyCards = async (userId, cardId) => {
         await addUserCard(cardId, userId);
@@ -44,27 +19,33 @@ export const CardInfoButtons = ({ card }) => {
         // console.log(`RemoveFromMyCards Called - UserId=${userId}, CardId=${cardId}`);
     };
 
-    if (loading) {
-        return <Spinner />; 
+    const addCardToDeck = async (deckId, cardId) => {
+        await addCardToDeckCards(deckId, cardId);
+        await getAndSetMyCards(user.id);
     }
 
-    return (
+    return !user ? <Spinner /> :
         <div id="card-info_buttons">
-            {isMyCard ? (
-                <button
-                    className="card-info_btn button"
-                    id="info-remove_btn"
-                    onClick={() => { removeFromMyCards(user.id, card.id) }}>
-                    Remove from My Cards
-                </button>
-            ) : (
-                <button
-                    className="card-info_btn button"
-                    id="info-add_btn"
-                    onClick={() => { addToMyCards(user.id, card.id) }}>
-                    Add to My Cards
-                </button>
-            )}
+            <div>
+                {isMyCard ? (
+                    <button
+                        className="card-info_btn button"
+                        id="info-remove_btn"
+                        onClick={() => { removeFromMyCards(user.id, card.id) }}>
+                        Remove from My Cards
+                    </button>
+                ) : (
+                    <button
+                        className="card-info_btn button"
+                        id="info-add_btn"
+                        onClick={() => { addToMyCards(user.id, card.id) }}>
+                        Add to My Cards
+                    </button>
+                )}
+            </div>
+            {isMyCard ?
+               <AddToDeckBtn card={card} addCardToDeck={addCardToDeck} user={user}/>
+                : ""
+            }
         </div>
-    );
 }
