@@ -3,7 +3,8 @@
 import { Spinner } from "reactstrap";
 import { addUserCard, removeUserCard } from "../../managers/cardManager";
 import { AddToDeckBtn } from "./AddToDeckBtn";
-import { addCardToDeckCards } from "../../managers/deckManager";
+import { addCardToDeckCards, getDeckCardsByDeckId } from "../../managers/deckManager";
+import { useEffect, useState } from "react";
 
 export const CardInfoButtons = ({ card, user, isMyCard, getAndSetMyCards }) => {
 
